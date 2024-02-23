@@ -1,4 +1,4 @@
-# TURBOTAIL- ARTWORK
+# FLAMESTARTERS - ARTWORK 🔥
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge)
 ![Node](https://img.shields.io/badge/node-v20.10.0-blue.svg?style=for-the-badge)
@@ -38,9 +38,9 @@
 
 ## About The Project
 
-![TurboTails](#)
+![FlameStarters](https://github.com/trashpirate/flamestarters/blob/master/flamestarters.jpg?raw=true)
 
-This repository contains the smart contract and deployment/testing suite to create an NFT (Non-Fungible Token) collection consisting of 10000 unique  images known as "TurboTails." These fun pets in fast cars come with many different traits of varying rarity. The entire process, from renaming files to generating metadata files, is designed to facilitate the upload of the collection to [IPFS](https://ipfs.tech/).
+This repo contains the code to generate a collection of 177 unique AI-generated and human-curated pieces designed to ignite the EARNer in you! Collect rare characters like flintstone from the earliest days of mankind, or mint a bougie designer lighter. Hidden within the collection are seven legendary pieces that stand apart from all others. The entire process, from renaming files to generating metadata files, is designed to facilitate the upload of the collection to [IPFS](https://ipfs.tech/).
 
 <!-- GETTING STARTED -->
 
