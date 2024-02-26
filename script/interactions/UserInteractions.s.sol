@@ -40,7 +40,7 @@ contract TransferNft is Script {
 
     function transferNft(address recentContractAddress) public {
         vm.startBroadcast();
-        FlameStarters(payable(recentContractAddress)).transferFrom(tx.origin, NEW_USER, 0);
+        FlameStarters(payable(recentContractAddress)).transferFrom(tx.origin, NEW_USER, 1);
         vm.stopBroadcast();
     }
 
@@ -55,7 +55,7 @@ contract ApproveNft is Script {
 
     function approveNft(address recentContractAddress) public {
         vm.startBroadcast();
-        FlameStarters(payable(recentContractAddress)).approve(SENDER, 0);
+        FlameStarters(payable(recentContractAddress)).approve(SENDER, 1);
         vm.stopBroadcast();
     }
 

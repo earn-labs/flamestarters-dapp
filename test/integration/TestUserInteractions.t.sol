@@ -87,6 +87,6 @@ contract UserInteractionsTest is Test {
         ApproveNft approveNft = new ApproveNft();
         approveNft.approveNft(address(nftContract));
 
-        assert(nftContract.getApproved(0) == makeAddr("sender"));
+        assert(nftContract.getApproved(1) == makeAddr("sender"));
     }
 }

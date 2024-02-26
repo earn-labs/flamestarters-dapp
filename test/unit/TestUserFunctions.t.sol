@@ -116,8 +116,8 @@ contract TestUserFunctions is TestInitialized {
         assertEq(nfts.balanceOf(USER1), nfts.totalSupply());
 
         for (uint256 index = 0; index < nfts.totalSupply(); index++) {
-            console.log(nfts.tokenURI(index));
-            assertNotEq(bytes(nfts.tokenURI(index)).length, 0);
+            console.log(nfts.tokenURI(index + 1));
+            assertNotEq(bytes(nfts.tokenURI(index + 1)).length, 0);
         }
     }
 
@@ -131,7 +131,7 @@ contract TestUserFunctions is TestInitialized {
         nfts.mint{value: ethFee}(1);
         assertEq(nfts.balanceOf(USER1), 1);
 
-        console.log(nfts.tokenURI(0));
+        console.log(nfts.tokenURI(1));
     }
 
     function test__ChargesCorrectAmount() public funded(USER1) mintOpen {
@@ -160,24 +160,6 @@ contract TestUserFunctions is TestInitialized {
         assertEq(USER1.balance, expectedUserEthBalance);
         assertEq(token.balanceOf(nfts.getFeeAddress()), expectedFeeTokenBalance);
         assertEq(nfts.getFeeAddress().balance, expectedFeeEthBalance);
-    }
-
-    //////////////////////
-    // events          //
-    /////////////////////
-
-    function test__EmitEvent__Mint() public funded(USER1) mintOpen {
-        uint256 ethFee = nfts.getEthFee();
-        uint256 tokenFee = nfts.getTokenFee();
-
-        vm.prank(USER1);
-        token.approve(address(nfts), tokenFee);
-
-        vm.expectEmit(true, true, true, true);
-        emit MetadataUpdate(0);
-
-        vm.prank(USER1);
-        nfts.mint{value: ethFee}(1);
     }
 
     //////////////////////
@@ -371,9 +353,9 @@ contract TestUserFunctions is TestInitialized {
         for (uint256 index = 0; index < MAX_SUPPLY; index++) {
             vm.prank(USER1);
             nfts.mint{value: ethFee}(1);
-            string memory tokenUri = nfts.tokenURI(index);
+            string memory tokenUri = nfts.tokenURI(index + 1);
             console.log(tokenUri);
-            assertEq(nfts.ownerOf(index), USER1);
+            assertEq(nfts.ownerOf(index + 1), USER1);
             assertEq(fuzzHelper.isTokenUriSet(tokenUri), false);
             fuzzHelper.setTokenUri(tokenUri);
             vm.roll(roll + index);

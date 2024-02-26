@@ -41,8 +41,11 @@ contract TestDeployment is TestInitialized {
         assertEq(nfts.getMaxSupply(), MAX_SUPPLY);
         assertEq(nfts.supportsInterface(0x80ac58cd), true);
 
-        vm.expectRevert(IERC721A.OwnerQueryForNonexistentToken.selector);
+        vm.expectRevert(IERC721A.URIQueryForNonexistentToken.selector);
         nfts.tokenURI(0);
+
+        vm.expectRevert(IERC721A.URIQueryForNonexistentToken.selector);
+        nfts.tokenURI(1);
     }
 
     function test__NoBaseUriOnDeployment() public {

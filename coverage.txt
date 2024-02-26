@@ -1,0 +1,1218 @@
+Compiling 59 files with 0.8.20
+Solc 0.8.20 finished in 4.10s
+Compiler run [33msuccessful with warnings:[0m
+[1;33mWarning (5740)[0m[1;37m: Unreachable code.[0m
+  [34m-->[0m test/invariants/TestInvariants.t.sol:49:81:
+[34m   |[0m
+[34m49 |[0m     function invariant__TotalSupplyIsLessThanOrEqualMaxSupply() public skipFork [33m{[0m
+[34m   |[0m                                                                                 [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+
+[1;33mWarning (5740)[0m[1;37m: Unreachable code.[0m
+  [34m-->[0m test/invariants/TestInvariants.t.sol:53:62:
+[34m   |[0m
+[34m53 |[0m     function invariant__TotalCollectedFees() public skipFork [33m{[0m
+[34m   |[0m                                                              [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+
+[1;33mWarning (5740)[0m[1;37m: Unreachable code.[0m
+   [34m-->[0m test/unit/TestUserFunctions.t.sol:301:118:
+[34m    |[0m
+[34m301 |[0m     function test__Fuzz__MintNfts(address account, uint256 numOfNfts) public funded(account) maxMintAllowed skipFork [33m{[0m
+[34m    |[0m                                                                                                                      [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+
+[1;33mWarning (5740)[0m[1;37m: Unreachable code.[0m
+   [34m-->[0m test/unit/TestUserFunctions.t.sol:320:5:
+[34m    |[0m
+[34m320 |[0m     [33m{[0m
+[34m    |[0m     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+
+[1;33mWarning (5740)[0m[1;37m: Unreachable code.[0m
+   [34m-->[0m test/unit/TestUserFunctions.t.sol:344:101:
+[34m    |[0m
+[34m344 |[0m     function test__Fuzz__UniqueTokenUris(uint256 roll) public funded(USER1) maxMintAllowed skipFork [33m{[0m
+[34m    |[0m                                                                                                     [1;33m^ (Relevant source part starts here and spans across multiple lines).[0m
+
+Analysing contracts...
+Running tests...
+Uncovered for script/deployment/DeployERC20Token.s.sol:
+- Function "run" (location: source ID 44, line 9, chars 259-575, hits: 0)
+- Line (location: source ID 44, line 10, chars 314-360, hits: 0)
+- Statement (location: source ID 44, line 10, chars 314-360, hits: 0)
+- Statement (location: source ID 44, line 10, chars 342-360, hits: 0)
+- Line (location: source ID 44, line 11, chars 370-431, hits: 0)
+- Statement (location: source ID 44, line 11, chars 370-431, hits: 0)
+- Statement (location: source ID 44, line 11, chars 397-431, hits: 0)
+- Line (location: source ID 44, line 13, chars 442-461, hits: 0)
+- Statement (location: source ID 44, line 13, chars 442-461, hits: 0)
+- Line (location: source ID 44, line 14, chars 471-518, hits: 0)
+- Statement (location: source ID 44, line 14, chars 471-518, hits: 0)
+- Statement (location: source ID 44, line 14, chars 490-518, hits: 0)
+- Line (location: source ID 44, line 15, chars 528-546, hits: 0)
+- Statement (location: source ID 44, line 15, chars 528-546, hits: 0)
+- Line (location: source ID 44, line 16, chars 556-568, hits: 0)
+- Statement (location: source ID 44, line 16, chars 556-568, hits: 0)
+
+Uncovered for script/deployment/DeployFlameStarters.s.sol:
+
+Uncovered for script/helpers/HelperConfig.s.sol:
+- Function "getTestnetConfig" (location: source ID 46, line 33, chars 1003-1331, hits: 0)
+- Line (location: source ID 46, line 34, chars 1084-1324, hits: 0)
+- Statement (location: source ID 46, line 34, chars 1084-1324, hits: 0)
+- Statement (location: source ID 46, line 34, chars 1091-1324, hits: 0)
+- Function "getMainnetConfig" (location: source ID 46, line 41, chars 1337-1665, hits: 0)
+- Line (location: source ID 46, line 42, chars 1418-1658, hits: 0)
+- Statement (location: source ID 46, line 42, chars 1418-1658, hits: 0)
+- Statement (location: source ID 46, line 42, chars 1425-1658, hits: 0)
+- Function "getLocalForkConfig" (location: source ID 46, line 49, chars 1671-2001, hits: 0)
+- Line (location: source ID 46, line 50, chars 1754-1994, hits: 0)
+- Statement (location: source ID 46, line 50, chars 1754-1994, hits: 0)
+- Statement (location: source ID 46, line 50, chars 1761-1994, hits: 0)
+- Function "getAnvilConfig" (location: source ID 46, line 57, chars 2007-2445, hits: 0)
+- Line (location: source ID 46, line 59, chars 2113-2132, hits: 0)
+- Statement (location: source ID 46, line 59, chars 2113-2132, hits: 0)
+- Line (location: source ID 46, line 60, chars 2142-2187, hits: 0)
+- Statement (location: source ID 46, line 60, chars 2142-2187, hits: 0)
+- Statement (location: source ID 46, line 60, chars 2161-2187, hits: 0)
+- Line (location: source ID 46, line 61, chars 2197-2215, hits: 0)
+- Statement (location: source ID 46, line 61, chars 2197-2215, hits: 0)
+- Line (location: source ID 46, line 63, chars 2226-2438, hits: 0)
+- Statement (location: source ID 46, line 63, chars 2226-2438, hits: 0)
+- Statement (location: source ID 46, line 63, chars 2233-2438, hits: 0)
+
+Uncovered for script/interactions/OwnerInteractions.s.sol:
+- Function "run" (location: source ID 47, line 39, chars 1121-1309, hits: 0)
+- Line (location: source ID 47, line 40, chars 1155-1257, hits: 0)
+- Statement (location: source ID 47, line 40, chars 1155-1257, hits: 0)
+- Statement (location: source ID 47, line 40, chars 1187-1257, hits: 0)
+- Line (location: source ID 47, line 41, chars 1267-1302, hits: 0)
+- Statement (location: source ID 47, line 41, chars 1267-1302, hits: 0)
+- Function "run" (location: source ID 47, line 56, chars 1642-1835, hits: 0)
+- Line (location: source ID 47, line 57, chars 1676-1778, hits: 0)
+- Statement (location: source ID 47, line 57, chars 1676-1778, hits: 0)
+- Statement (location: source ID 47, line 57, chars 1708-1778, hits: 0)
+- Line (location: source ID 47, line 59, chars 1789-1828, hits: 0)
+- Statement (location: source ID 47, line 59, chars 1789-1828, hits: 0)
+- Function "setNewMaxPerWallet" (location: source ID 47, line 67, chars 1949-2170, hits: 0)
+- Line (location: source ID 47, line 68, chars 2025-2044, hits: 0)
+- Statement (location: source ID 47, line 68, chars 2025-2044, hits: 0)
+- Line (location: source ID 47, line 69, chars 2054-2135, hits: 0)
+- Statement (location: source ID 47, line 69, chars 2054-2135, hits: 0)
+- Line (location: source ID 47, line 70, chars 2145-2163, hits: 0)
+- Statement (location: source ID 47, line 70, chars 2145-2163, hits: 0)
+- Function "run" (location: source ID 47, line 73, chars 2176-2370, hits: 0)
+- Line (location: source ID 47, line 74, chars 2210-2312, hits: 0)
+- Statement (location: source ID 47, line 74, chars 2210-2312, hits: 0)
+- Statement (location: source ID 47, line 74, chars 2242-2312, hits: 0)
+- Line (location: source ID 47, line 75, chars 2322-2363, hits: 0)
+- Statement (location: source ID 47, line 75, chars 2322-2363, hits: 0)
+- Function "setNewBatchLimit" (location: source ID 47, line 83, chars 2477-2691, hits: 0)
+- Line (location: source ID 47, line 84, chars 2551-2570, hits: 0)
+- Statement (location: source ID 47, line 84, chars 2551-2570, hits: 0)
+- Line (location: source ID 47, line 85, chars 2580-2656, hits: 0)
+- Statement (location: source ID 47, line 85, chars 2580-2656, hits: 0)
+- Line (location: source ID 47, line 86, chars 2666-2684, hits: 0)
+- Statement (location: source ID 47, line 86, chars 2666-2684, hits: 0)
+- Function "run" (location: source ID 47, line 89, chars 2697-2889, hits: 0)
+- Line (location: source ID 47, line 90, chars 2731-2833, hits: 0)
+- Statement (location: source ID 47, line 90, chars 2731-2833, hits: 0)
+- Statement (location: source ID 47, line 90, chars 2763-2833, hits: 0)
+- Line (location: source ID 47, line 91, chars 2843-2882, hits: 0)
+- Statement (location: source ID 47, line 91, chars 2843-2882, hits: 0)
+- Function "run" (location: source ID 47, line 105, chars 3218-3410, hits: 0)
+- Line (location: source ID 47, line 106, chars 3252-3354, hits: 0)
+- Statement (location: source ID 47, line 106, chars 3252-3354, hits: 0)
+- Statement (location: source ID 47, line 106, chars 3284-3354, hits: 0)
+- Line (location: source ID 47, line 107, chars 3364-3403, hits: 0)
+- Statement (location: source ID 47, line 107, chars 3364-3403, hits: 0)
+- Function "run" (location: source ID 47, line 22, chars 623-813, hits: 0)
+- Line (location: source ID 47, line 23, chars 657-759, hits: 0)
+- Statement (location: source ID 47, line 23, chars 657-759, hits: 0)
+- Statement (location: source ID 47, line 23, chars 689-759, hits: 0)
+- Line (location: source ID 47, line 24, chars 769-806, hits: 0)
+- Statement (location: source ID 47, line 24, chars 769-806, hits: 0)
+- Function "run" (location: source ID 47, line 123, chars 3853-4054, hits: 0)
+- Line (location: source ID 47, line 124, chars 3887-3989, hits: 0)
+- Statement (location: source ID 47, line 124, chars 3887-3989, hits: 0)
+- Statement (location: source ID 47, line 124, chars 3919-3989, hits: 0)
+- Line (location: source ID 47, line 125, chars 3999-4047, hits: 0)
+- Statement (location: source ID 47, line 125, chars 3999-4047, hits: 0)
+
+Uncovered for script/interactions/UserInteractions.s.sol:
+- Function "run" (location: source ID 48, line 47, chars 1644-1831, hits: 0)
+- Line (location: source ID 48, line 48, chars 1678-1780, hits: 0)
+- Statement (location: source ID 48, line 48, chars 1678-1780, hits: 0)
+- Statement (location: source ID 48, line 48, chars 1710-1780, hits: 0)
+- Line (location: source ID 48, line 49, chars 1790-1824, hits: 0)
+- Statement (location: source ID 48, line 49, chars 1790-1824, hits: 0)
+- Function "run" (location: source ID 48, line 32, chars 1144-1336, hits: 0)
+- Line (location: source ID 48, line 33, chars 1178-1280, hits: 0)
+- Statement (location: source ID 48, line 33, chars 1178-1280, hits: 0)
+- Statement (location: source ID 48, line 33, chars 1210-1280, hits: 0)
+- Line (location: source ID 48, line 34, chars 1290-1329, hits: 0)
+- Statement (location: source ID 48, line 34, chars 1290-1329, hits: 0)
+- Function "run" (location: source ID 48, line 62, chars 2115-2301, hits: 0)
+- Line (location: source ID 48, line 63, chars 2149-2251, hits: 0)
+- Statement (location: source ID 48, line 63, chars 2149-2251, hits: 0)
+- Statement (location: source ID 48, line 63, chars 2181-2251, hits: 0)
+- Line (location: source ID 48, line 64, chars 2261-2294, hits: 0)
+- Statement (location: source ID 48, line 64, chars 2261-2294, hits: 0)
+
+Uncovered for src/FlameStarters.sol:
+- Branch (branch: 6, path: 0) (location: source ID 50, line 97, chars 3950-4004, hits: 0)
+- Statement (location: source ID 50, line 97, chars 3964-4004, hits: 0)
+- Function "_setBaseURI" (location: source ID 50, line 225, chars 8516-8609, hits: 0)
+- Line (location: source ID 50, line 226, chars 8578-8602, hits: 0)
+- Statement (location: source ID 50, line 226, chars 8578-8602, hits: 0)
+
+Uncovered for test/invariants/TestInvariants.t.sol:
+- Function "invariant__TotalSupplyIsLessThanOrEqualMaxSupply" (location: source ID 53, line 49, chars 1406-1539, hits: 0)
+- Line (location: source ID 53, line 50, chars 1492-1532, hits: 0)
+- Statement (location: source ID 53, line 50, chars 1492-1532, hits: 0)
+- Function "invariant__TotalCollectedFees" (location: source ID 53, line 53, chars 1545-1803, hits: 0)
+- Line (location: source ID 53, line 54, chars 1612-1702, hits: 0)
+- Statement (location: source ID 53, line 54, chars 1612-1702, hits: 0)
+- Line (location: source ID 53, line 55, chars 1712-1796, hits: 0)
+- Statement (location: source ID 53, line 55, chars 1712-1796, hits: 0)
+
+Uncovered for test/invariants/handlers/Handler.sol:
+- Function "_giveETH" (location: source ID 54, line 81, chars 2148-2451, hits: 0)
+- Line (location: source ID 54, line 82, chars 2216-2274, hits: 0)
+- Statement (location: source ID 54, line 82, chars 2216-2274, hits: 0)
+- Statement (location: source ID 54, line 82, chars 2234-2274, hits: 0)
+- Line (location: source ID 54, line 83, chars 2288-2296, hits: 0)
+- Statement (location: source ID 54, line 83, chars 2288-2296, hits: 0)
+- Branch (branch: 0, path: 0) (location: source ID 54, line 83, chars 2284-2445, hits: 0)
+- Branch (branch: 0, path: 1) (location: source ID 54, line 83, chars 2284-2445, hits: 0)
+- Line (location: source ID 54, line 84, chars 2312-2368, hits: 0)
+- Statement (location: source ID 54, line 84, chars 2312-2368, hits: 0)
+- Line (location: source ID 54, line 85, chars 2382-2434, hits: 0)
+- Statement (location: source ID 54, line 85, chars 2382-2434, hits: 0)
+- Function "getFuzzFee" (location: source ID 54, line 89, chars 2457-2541, hits: 0)
+- Line (location: source ID 54, line 90, chars 2519-2534, hits: 0)
+- Statement (location: source ID 54, line 90, chars 2519-2534, hits: 0)
+- Function "getFuzzEthFee" (location: source ID 54, line 93, chars 2547-2638, hits: 0)
+- Line (location: source ID 54, line 94, chars 2612-2631, hits: 0)
+- Statement (location: source ID 54, line 94, chars 2612-2631, hits: 0)
+- Function "" (location: source ID 54, line 123, chars 3331-3361, hits: 0)
+- Function "callSummary" (location: source ID 54, line 140, chars 3895-4119, hits: 0)
+- Line (location: source ID 54, line 141, chars 3942-3972, hits: 0)
+- Statement (location: source ID 54, line 141, chars 3942-3972, hits: 0)
+- Line (location: source ID 54, line 142, chars 3982-4016, hits: 0)
+- Statement (location: source ID 54, line 142, chars 3982-4016, hits: 0)
+- Line (location: source ID 54, line 143, chars 4026-4060, hits: 0)
+- Statement (location: source ID 54, line 143, chars 4026-4060, hits: 0)
+- Line (location: source ID 54, line 144, chars 4070-4112, hits: 0)
+- Statement (location: source ID 54, line 144, chars 4070-4112, hits: 0)
+- Function "rand" (location: source ID 54, line 21, chars 562-801, hits: 0)
+- Line (location: source ID 54, line 22, chars 658-676, hits: 0)
+- Statement (location: source ID 54, line 22, chars 658-676, hits: 0)
+- Branch (branch: 0, path: 0) (location: source ID 54, line 22, chars 654-740, hits: 0)
+- Branch (branch: 0, path: 1) (location: source ID 54, line 22, chars 654-740, hits: 0)
+- Line (location: source ID 54, line 23, chars 692-729, hits: 0)
+- Statement (location: source ID 54, line 23, chars 692-729, hits: 0)
+- Line (location: source ID 54, line 25, chars 760-784, hits: 0)
+- Statement (location: source ID 54, line 25, chars 760-784, hits: 0)
+- Statement (location: source ID 54, line 25, chars 767-784, hits: 0)
+- Function "add" (location: source ID 54, line 29, chars 807-978, hits: 0)
+- Line (location: source ID 54, line 30, chars 879-893, hits: 0)
+- Statement (location: source ID 54, line 30, chars 879-893, hits: 0)
+- Branch (branch: 1, path: 0) (location: source ID 54, line 30, chars 875-972, hits: 0)
+- Branch (branch: 1, path: 1) (location: source ID 54, line 30, chars 875-972, hits: 0)
+- Line (location: source ID 54, line 31, chars 909-927, hits: 0)
+- Statement (location: source ID 54, line 31, chars 909-927, hits: 0)
+- Line (location: source ID 54, line 32, chars 941-961, hits: 0)
+- Statement (location: source ID 54, line 32, chars 941-961, hits: 0)
+- Function "contains" (location: source ID 54, line 36, chars 984-1104, hits: 0)
+- Line (location: source ID 54, line 37, chars 1077-1097, hits: 0)
+- Statement (location: source ID 54, line 37, chars 1077-1097, hits: 0)
+- Function "count" (location: source ID 54, line 40, chars 1110-1217, hits: 0)
+- Line (location: source ID 54, line 41, chars 1189-1210, hits: 0)
+- Statement (location: source ID 54, line 41, chars 1189-1210, hits: 0)
+- Function "getAddressAtIndex" (location: source ID 54, line 44, chars 1223-1355, hits: 0)
+- Line (location: source ID 54, line 45, chars 1327-1348, hits: 0)
+- Statement (location: source ID 54, line 45, chars 1327-1348, hits: 0)
+
+Uncovered for test/unit/TestInitialized.t.sol:
+- Function "setUp" (location: source ID 56, line 34, chars 974-1252, hits: 0)
+- Line (location: source ID 56, line 35, chars 1018-1056, hits: 0)
+- Statement (location: source ID 56, line 35, chars 1018-1056, hits: 0)
+- Line (location: source ID 56, line 36, chars 1066-1105, hits: 0)
+- Statement (location: source ID 56, line 36, chars 1066-1105, hits: 0)
+- Line (location: source ID 56, line 38, chars 1116-1193, hits: 0)
+- Statement (location: source ID 56, line 38, chars 1116-1193, hits: 0)
+- Line (location: source ID 56, line 39, chars 1203-1245, hits: 0)
+- Statement (location: source ID 56, line 39, chars 1203-1245, hits: 0)
+
+Uncovered for test/unit/TestUserFunctions.t.sol:
+- Function "setTokenUri" (location: source ID 58, line 19, chars 584-679, hits: 0)
+- Line (location: source ID 58, line 20, chars 646-672, hits: 0)
+- Statement (location: source ID 58, line 20, chars 646-672, hits: 0)
+- Function "isTokenUriSet" (location: source ID 58, line 23, chars 685-802, hits: 0)
+- Line (location: source ID 58, line 24, chars 769-795, hits: 0)
+- Statement (location: source ID 58, line 24, chars 769-795, hits: 0)
+
+Anchors for Contract "SetMaxBatchLimit" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 47):
+- IC 70 -> Item 344
+  - Refers to item: Function "setNewBatchLimit" (location: source ID 47, line 99, chars 2998-3212, hits: 2)
+- IC 175 -> Item 345
+  - Refers to item: Line (location: source ID 47, line 100, chars 3072-3091, hits: 2)
+- IC 175 -> Item 346
+  - Refers to item: Statement (location: source ID 47, line 100, chars 3072-3091, hits: 2)
+- IC 270 -> Item 347
+  - Refers to item: Line (location: source ID 47, line 101, chars 3101-3177, hits: 2)
+- IC 270 -> Item 348
+  - Refers to item: Statement (location: source ID 47, line 101, chars 3101-3177, hits: 2)
+- IC 414 -> Item 349
+  - Refers to item: Line (location: source ID 47, line 102, chars 3187-3205, hits: 2)
+- IC 414 -> Item 350
+  - Refers to item: Statement (location: source ID 47, line 102, chars 3187-3205, hits: 2)
+- IC 98 -> Item 351
+  - Refers to item: Function "run" (location: source ID 47, line 105, chars 3218-3410, hits: 0)
+- IC 512 -> Item 352
+  - Refers to item: Line (location: source ID 47, line 106, chars 3252-3354, hits: 0)
+- IC 512 -> Item 353
+  - Refers to item: Statement (location: source ID 47, line 106, chars 3252-3354, hits: 0)
+- IC 514 -> Item 354
+  - Refers to item: Statement (location: source ID 47, line 106, chars 3284-3354, hits: 0)
+- IC 636 -> Item 355
+  - Refers to item: Line (location: source ID 47, line 107, chars 3364-3403, hits: 0)
+- IC 636 -> Item 356
+  - Refers to item: Statement (location: source ID 47, line 107, chars 3364-3403, hits: 0)
+
+Anchors for Contract "TestInitialized" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 56):
+- IC 201 -> Item 0
+  - Refers to item: Function "setUp" (location: source ID 56, line 34, chars 974-1252, hits: 0)
+- IC 588 -> Item 1
+  - Refers to item: Line (location: source ID 56, line 35, chars 1018-1056, hits: 0)
+- IC 588 -> Item 2
+  - Refers to item: Statement (location: source ID 56, line 35, chars 1018-1056, hits: 0)
+- IC 696 -> Item 3
+  - Refers to item: Line (location: source ID 56, line 36, chars 1066-1105, hits: 0)
+- IC 696 -> Item 4
+  - Refers to item: Statement (location: source ID 56, line 36, chars 1066-1105, hits: 0)
+- IC 981 -> Item 5
+  - Refers to item: Line (location: source ID 56, line 38, chars 1116-1193, hits: 0)
+- IC 981 -> Item 6
+  - Refers to item: Statement (location: source ID 56, line 38, chars 1116-1193, hits: 0)
+- IC 1333 -> Item 7
+  - Refers to item: Line (location: source ID 56, line 39, chars 1203-1245, hits: 0)
+- IC 1333 -> Item 8
+  - Refers to item: Statement (location: source ID 56, line 39, chars 1203-1245, hits: 0)
+
+Anchors for Contract "DeployERC20Token" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 44):
+- IC 63 -> Item 449
+  - Refers to item: Function "run" (location: source ID 44, line 9, chars 259-575, hits: 0)
+- IC 134 -> Item 450
+  - Refers to item: Line (location: source ID 44, line 10, chars 314-360, hits: 0)
+- IC 134 -> Item 451
+  - Refers to item: Statement (location: source ID 44, line 10, chars 314-360, hits: 0)
+- IC 135 -> Item 452
+  - Refers to item: Statement (location: source ID 44, line 10, chars 342-360, hits: 0)
+- IC 181 -> Item 453
+  - Refers to item: Line (location: source ID 44, line 11, chars 370-431, hits: 0)
+- IC 181 -> Item 454
+  - Refers to item: Statement (location: source ID 44, line 11, chars 370-431, hits: 0)
+- IC 183 -> Item 455
+  - Refers to item: Statement (location: source ID 44, line 11, chars 397-431, hits: 0)
+- IC 337 -> Item 456
+  - Refers to item: Line (location: source ID 44, line 13, chars 442-461, hits: 0)
+- IC 337 -> Item 457
+  - Refers to item: Statement (location: source ID 44, line 13, chars 442-461, hits: 0)
+- IC 434 -> Item 458
+  - Refers to item: Line (location: source ID 44, line 14, chars 471-518, hits: 0)
+- IC 434 -> Item 459
+  - Refers to item: Statement (location: source ID 44, line 14, chars 471-518, hits: 0)
+- IC 436 -> Item 460
+  - Refers to item: Statement (location: source ID 44, line 14, chars 490-518, hits: 0)
+- IC 531 -> Item 461
+  - Refers to item: Line (location: source ID 44, line 15, chars 528-546, hits: 0)
+- IC 531 -> Item 462
+  - Refers to item: Statement (location: source ID 44, line 15, chars 528-546, hits: 0)
+- IC 628 -> Item 463
+  - Refers to item: Line (location: source ID 44, line 16, chars 556-568, hits: 0)
+- IC 628 -> Item 464
+  - Refers to item: Statement (location: source ID 44, line 16, chars 556-568, hits: 0)
+
+Anchors for Contract "SetNewFeeAddress" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 47):
+- IC 70 -> Item 128
+  - Refers to item: Function "setNewFeeAddress" (location: source ID 47, line 50, chars 1422-1636, hits: 1)
+- IC 175 -> Item 129
+  - Refers to item: Line (location: source ID 47, line 51, chars 1496-1515, hits: 1)
+- IC 175 -> Item 130
+  - Refers to item: Statement (location: source ID 47, line 51, chars 1496-1515, hits: 1)
+- IC 270 -> Item 131
+  - Refers to item: Line (location: source ID 47, line 52, chars 1525-1601, hits: 1)
+- IC 270 -> Item 132
+  - Refers to item: Statement (location: source ID 47, line 52, chars 1525-1601, hits: 1)
+- IC 447 -> Item 133
+  - Refers to item: Line (location: source ID 47, line 53, chars 1611-1629, hits: 1)
+- IC 447 -> Item 134
+  - Refers to item: Statement (location: source ID 47, line 53, chars 1611-1629, hits: 1)
+- IC 98 -> Item 135
+  - Refers to item: Function "run" (location: source ID 47, line 56, chars 1642-1835, hits: 0)
+- IC 545 -> Item 136
+  - Refers to item: Line (location: source ID 47, line 57, chars 1676-1778, hits: 0)
+- IC 545 -> Item 137
+  - Refers to item: Statement (location: source ID 47, line 57, chars 1676-1778, hits: 0)
+- IC 547 -> Item 138
+  - Refers to item: Statement (location: source ID 47, line 57, chars 1708-1778, hits: 0)
+- IC 669 -> Item 139
+  - Refers to item: Line (location: source ID 47, line 59, chars 1789-1828, hits: 0)
+- IC 669 -> Item 140
+  - Refers to item: Statement (location: source ID 47, line 59, chars 1789-1828, hits: 0)
+
+Anchors for Contract "SetNewMaxPerWallet" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 47):
+- IC 70 -> Item 299
+  - Refers to item: Function "setNewMaxPerWallet" (location: source ID 47, line 67, chars 1949-2170, hits: 0)
+- IC 175 -> Item 300
+  - Refers to item: Line (location: source ID 47, line 68, chars 2025-2044, hits: 0)
+- IC 175 -> Item 301
+  - Refers to item: Statement (location: source ID 47, line 68, chars 2025-2044, hits: 0)
+- IC 270 -> Item 302
+  - Refers to item: Line (location: source ID 47, line 69, chars 2054-2135, hits: 0)
+- IC 270 -> Item 303
+  - Refers to item: Statement (location: source ID 47, line 69, chars 2054-2135, hits: 0)
+- IC 414 -> Item 304
+  - Refers to item: Line (location: source ID 47, line 70, chars 2145-2163, hits: 0)
+- IC 414 -> Item 305
+  - Refers to item: Statement (location: source ID 47, line 70, chars 2145-2163, hits: 0)
+- IC 98 -> Item 306
+  - Refers to item: Function "run" (location: source ID 47, line 73, chars 2176-2370, hits: 0)
+- IC 512 -> Item 307
+  - Refers to item: Line (location: source ID 47, line 74, chars 2210-2312, hits: 0)
+- IC 512 -> Item 308
+  - Refers to item: Statement (location: source ID 47, line 74, chars 2210-2312, hits: 0)
+- IC 514 -> Item 309
+  - Refers to item: Statement (location: source ID 47, line 74, chars 2242-2312, hits: 0)
+- IC 636 -> Item 310
+  - Refers to item: Line (location: source ID 47, line 75, chars 2322-2363, hits: 0)
+- IC 636 -> Item 311
+  - Refers to item: Statement (location: source ID 47, line 75, chars 2322-2363, hits: 0)
+
+Anchors for Contract "TransferNft" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 48):
+- IC 70 -> Item 32
+  - Refers to item: Function "transferNft" (location: source ID 48, line 41, chars 1423-1638, hits: 1)
+- IC 175 -> Item 33
+  - Refers to item: Line (location: source ID 48, line 42, chars 1492-1511, hits: 1)
+- IC 175 -> Item 34
+  - Refers to item: Statement (location: source ID 48, line 42, chars 1492-1511, hits: 1)
+- IC 270 -> Item 35
+  - Refers to item: Line (location: source ID 48, line 43, chars 1521-1603, hits: 1)
+- IC 270 -> Item 36
+  - Refers to item: Statement (location: source ID 48, line 43, chars 1521-1603, hits: 1)
+- IC 452 -> Item 37
+  - Refers to item: Line (location: source ID 48, line 44, chars 1613-1631, hits: 1)
+- IC 452 -> Item 38
+  - Refers to item: Statement (location: source ID 48, line 44, chars 1613-1631, hits: 1)
+- IC 98 -> Item 39
+  - Refers to item: Function "run" (location: source ID 48, line 47, chars 1644-1831, hits: 0)
+- IC 550 -> Item 40
+  - Refers to item: Line (location: source ID 48, line 48, chars 1678-1780, hits: 0)
+- IC 550 -> Item 41
+  - Refers to item: Statement (location: source ID 48, line 48, chars 1678-1780, hits: 0)
+- IC 552 -> Item 42
+  - Refers to item: Statement (location: source ID 48, line 48, chars 1710-1780, hits: 0)
+- IC 674 -> Item 43
+  - Refers to item: Line (location: source ID 48, line 49, chars 1790-1824, hits: 0)
+- IC 674 -> Item 44
+  - Refers to item: Statement (location: source ID 48, line 49, chars 1790-1824, hits: 0)
+
+Anchors for Contract "HelperConfig" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 46):
+- IC 175 -> Item 9
+  - Refers to item: Function "getTestnetConfig" (location: source ID 46, line 33, chars 1003-1331, hits: 0)
+- IC 560 -> Item 10
+  - Refers to item: Line (location: source ID 46, line 34, chars 1084-1324, hits: 0)
+- IC 560 -> Item 11
+  - Refers to item: Statement (location: source ID 46, line 34, chars 1084-1324, hits: 0)
+- IC 560 -> Item 12
+  - Refers to item: Statement (location: source ID 46, line 34, chars 1091-1324, hits: 0)
+- IC 141 -> Item 13
+  - Refers to item: Function "getMainnetConfig" (location: source ID 46, line 41, chars 1337-1665, hits: 0)
+- IC 392 -> Item 14
+  - Refers to item: Line (location: source ID 46, line 42, chars 1418-1658, hits: 0)
+- IC 392 -> Item 15
+  - Refers to item: Statement (location: source ID 46, line 42, chars 1418-1658, hits: 0)
+- IC 392 -> Item 16
+  - Refers to item: Statement (location: source ID 46, line 42, chars 1425-1658, hits: 0)
+- IC 209 -> Item 17
+  - Refers to item: Function "getLocalForkConfig" (location: source ID 46, line 49, chars 1671-2001, hits: 0)
+- IC 728 -> Item 18
+  - Refers to item: Line (location: source ID 46, line 50, chars 1754-1994, hits: 0)
+- IC 728 -> Item 19
+  - Refers to item: Statement (location: source ID 46, line 50, chars 1754-1994, hits: 0)
+- IC 728 -> Item 20
+  - Refers to item: Statement (location: source ID 46, line 50, chars 1761-1994, hits: 0)
+- IC 277 -> Item 21
+  - Refers to item: Function "getAnvilConfig" (location: source ID 46, line 57, chars 2007-2445, hits: 0)
+- IC 956 -> Item 22
+  - Refers to item: Line (location: source ID 46, line 59, chars 2113-2132, hits: 0)
+- IC 956 -> Item 23
+  - Refers to item: Statement (location: source ID 46, line 59, chars 2113-2132, hits: 0)
+- IC 1053 -> Item 24
+  - Refers to item: Line (location: source ID 46, line 60, chars 2142-2187, hits: 0)
+- IC 1053 -> Item 25
+  - Refers to item: Statement (location: source ID 46, line 60, chars 2142-2187, hits: 0)
+- IC 1076 -> Item 26
+  - Refers to item: Statement (location: source ID 46, line 60, chars 2161-2187, hits: 0)
+- IC 1170 -> Item 27
+  - Refers to item: Line (location: source ID 46, line 61, chars 2197-2215, hits: 0)
+- IC 1170 -> Item 28
+  - Refers to item: Statement (location: source ID 46, line 61, chars 2197-2215, hits: 0)
+- IC 1267 -> Item 29
+  - Refers to item: Line (location: source ID 46, line 63, chars 2226-2438, hits: 0)
+- IC 1267 -> Item 30
+  - Refers to item: Statement (location: source ID 46, line 63, chars 2226-2438, hits: 0)
+- IC 1267 -> Item 31
+  - Refers to item: Statement (location: source ID 46, line 63, chars 2233-2438, hits: 0)
+
+Anchors for Contract "SetNewBatchLimit" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 47):
+- IC 70 -> Item 312
+  - Refers to item: Function "setNewBatchLimit" (location: source ID 47, line 83, chars 2477-2691, hits: 0)
+- IC 175 -> Item 313
+  - Refers to item: Line (location: source ID 47, line 84, chars 2551-2570, hits: 0)
+- IC 175 -> Item 314
+  - Refers to item: Statement (location: source ID 47, line 84, chars 2551-2570, hits: 0)
+- IC 270 -> Item 315
+  - Refers to item: Line (location: source ID 47, line 85, chars 2580-2656, hits: 0)
+- IC 270 -> Item 316
+  - Refers to item: Statement (location: source ID 47, line 85, chars 2580-2656, hits: 0)
+- IC 414 -> Item 317
+  - Refers to item: Line (location: source ID 47, line 86, chars 2666-2684, hits: 0)
+- IC 414 -> Item 318
+  - Refers to item: Statement (location: source ID 47, line 86, chars 2666-2684, hits: 0)
+- IC 98 -> Item 319
+  - Refers to item: Function "run" (location: source ID 47, line 89, chars 2697-2889, hits: 0)
+- IC 512 -> Item 320
+  - Refers to item: Line (location: source ID 47, line 90, chars 2731-2833, hits: 0)
+- IC 512 -> Item 321
+  - Refers to item: Statement (location: source ID 47, line 90, chars 2731-2833, hits: 0)
+- IC 514 -> Item 322
+  - Refers to item: Statement (location: source ID 47, line 90, chars 2763-2833, hits: 0)
+- IC 636 -> Item 323
+  - Refers to item: Line (location: source ID 47, line 91, chars 2843-2882, hits: 0)
+- IC 636 -> Item 324
+  - Refers to item: Statement (location: source ID 47, line 91, chars 2843-2882, hits: 0)
+
+Anchors for Contract "FuzzHelper" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 58):
+- IC 70 -> Item 325
+  - Refers to item: Function "setTokenUri" (location: source ID 58, line 19, chars 584-679, hits: 0)
+- IC 195 -> Item 326
+  - Refers to item: Line (location: source ID 58, line 20, chars 646-672, hits: 0)
+- IC 195 -> Item 327
+  - Refers to item: Statement (location: source ID 58, line 20, chars 646-672, hits: 0)
+- IC 98 -> Item 328
+  - Refers to item: Function "isTokenUriSet" (location: source ID 58, line 23, chars 685-802, hits: 0)
+- IC 255 -> Item 329
+  - Refers to item: Line (location: source ID 58, line 24, chars 769-795, hits: 0)
+- IC 255 -> Item 330
+  - Refers to item: Statement (location: source ID 58, line 24, chars 769-795, hits: 0)
+
+Anchors for Contract "Handler" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 54):
+- IC 867 -> Item 370
+  - Refers to item: Function "_giveETH" (location: source ID 54, line 81, chars 2148-2451, hits: 0)
+- IC 3886 -> Item 371
+  - Refers to item: Line (location: source ID 54, line 82, chars 2216-2274, hits: 0)
+- IC 3886 -> Item 372
+  - Refers to item: Statement (location: source ID 54, line 82, chars 2216-2274, hits: 0)
+- IC 3888 -> Item 373
+  - Refers to item: Statement (location: source ID 54, line 82, chars 2234-2274, hits: 0)
+- IC 3994 -> Item 374
+  - Refers to item: Line (location: source ID 54, line 83, chars 2288-2296, hits: 0)
+- IC 3994 -> Item 375
+  - Refers to item: Statement (location: source ID 54, line 83, chars 2288-2296, hits: 0)
+- IC 3999 -> Item 376
+  - Refers to item: Branch (branch: 0, path: 0) (location: source ID 54, line 83, chars 2284-2445, hits: 0)
+- IC 4126 -> Item 377
+  - Refers to item: Branch (branch: 0, path: 1) (location: source ID 54, line 83, chars 2284-2445, hits: 0)
+- IC 3999 -> Item 378
+  - Refers to item: Line (location: source ID 54, line 84, chars 2312-2368, hits: 0)
+- IC 3999 -> Item 379
+  - Refers to item: Statement (location: source ID 54, line 84, chars 2312-2368, hits: 0)
+- IC 4062 -> Item 380
+  - Refers to item: Line (location: source ID 54, line 85, chars 2382-2434, hits: 0)
+- IC 4062 -> Item 381
+  - Refers to item: Statement (location: source ID 54, line 85, chars 2382-2434, hits: 0)
+- IC 505 -> Item 382
+  - Refers to item: Function "getFuzzFee" (location: source ID 54, line 89, chars 2457-2541, hits: 0)
+- IC 2197 -> Item 383
+  - Refers to item: Line (location: source ID 54, line 90, chars 2519-2534, hits: 0)
+- IC 2197 -> Item 384
+  - Refers to item: Statement (location: source ID 54, line 90, chars 2519-2534, hits: 0)
+- IC 267 -> Item 385
+  - Refers to item: Function "getFuzzEthFee" (location: source ID 54, line 93, chars 2547-2638, hits: 0)
+- IC 1002 -> Item 386
+  - Refers to item: Line (location: source ID 54, line 94, chars 2612-2631, hits: 0)
+- IC 1002 -> Item 387
+  - Refers to item: Statement (location: source ID 54, line 94, chars 2612-2631, hits: 0)
+- IC 908 -> Item 389
+  - Refers to item: Function "mintNfts" (location: source ID 54, line 125, chars 3367-3889, hits: 30)
+- IC 4291 -> Item 390
+  - Refers to item: Line (location: source ID 54, line 126, chars 3475-3498, hits: 30)
+- IC 4291 -> Item 391
+  - Refers to item: Statement (location: source ID 54, line 126, chars 3475-3498, hits: 30)
+- IC 4311 -> Item 392
+  - Refers to item: Line (location: source ID 54, line 127, chars 3508-3536, hits: 30)
+- IC 4311 -> Item 393
+  - Refers to item: Statement (location: source ID 54, line 127, chars 3508-3536, hits: 30)
+- IC 4326 -> Item 394
+  - Refers to item: Line (location: source ID 54, line 129, chars 3547-3590, hits: 30)
+- IC 4326 -> Item 395
+  - Refers to item: Statement (location: source ID 54, line 129, chars 3547-3590, hits: 30)
+- IC 4335 -> Item 396
+  - Refers to item: Statement (location: source ID 54, line 129, chars 3569-3590, hits: 30)
+- IC 4348 -> Item 397
+  - Refers to item: Line (location: source ID 54, line 130, chars 3600-3636, hits: 30)
+- IC 4348 -> Item 398
+  - Refers to item: Statement (location: source ID 54, line 130, chars 3600-3636, hits: 30)
+- IC 4360 -> Item 399
+  - Refers to item: Statement (location: source ID 54, line 130, chars 3619-3636, hits: 30)
+- IC 4373 -> Item 400
+  - Refers to item: Line (location: source ID 54, line 131, chars 3646-3684, hits: 30)
+- IC 4373 -> Item 401
+  - Refers to item: Statement (location: source ID 54, line 131, chars 3646-3684, hits: 30)
+- IC 4568 -> Item 402
+  - Refers to item: Line (location: source ID 54, line 132, chars 3694-3725, hits: 30)
+- IC 4568 -> Item 403
+  - Refers to item: Statement (location: source ID 54, line 132, chars 3694-3725, hits: 30)
+- IC 4648 -> Item 404
+  - Refers to item: Line (location: source ID 54, line 134, chars 3736-3763, hits: 30)
+- IC 4648 -> Item 405
+  - Refers to item: Statement (location: source ID 54, line 134, chars 3736-3763, hits: 30)
+- IC 4788 -> Item 406
+  - Refers to item: Line (location: source ID 54, line 135, chars 3773-3811, hits: 30)
+- IC 4788 -> Item 407
+  - Refers to item: Statement (location: source ID 54, line 135, chars 3773-3811, hits: 30)
+- IC 4983 -> Item 408
+  - Refers to item: Line (location: source ID 54, line 136, chars 3821-3858, hits: 30)
+- IC 4983 -> Item 409
+  - Refers to item: Statement (location: source ID 54, line 136, chars 3821-3858, hits: 30)
+- IC 5161 -> Item 410
+  - Refers to item: Line (location: source ID 54, line 137, chars 3868-3882, hits: 30)
+- IC 5161 -> Item 411
+  - Refers to item: Statement (location: source ID 54, line 137, chars 3868-3882, hits: 30)
+- IC 310 -> Item 412
+  - Refers to item: Function "callSummary" (location: source ID 54, line 140, chars 3895-4119, hits: 0)
+- IC 1007 -> Item 413
+  - Refers to item: Line (location: source ID 54, line 141, chars 3942-3972, hits: 0)
+- IC 1007 -> Item 414
+  - Refers to item: Statement (location: source ID 54, line 141, chars 3942-3972, hits: 0)
+- IC 1069 -> Item 415
+  - Refers to item: Line (location: source ID 54, line 142, chars 3982-4016, hits: 0)
+- IC 1069 -> Item 416
+  - Refers to item: Statement (location: source ID 54, line 142, chars 3982-4016, hits: 0)
+- IC 1131 -> Item 417
+  - Refers to item: Line (location: source ID 54, line 143, chars 4026-4060, hits: 0)
+- IC 1131 -> Item 418
+  - Refers to item: Statement (location: source ID 54, line 143, chars 4026-4060, hits: 0)
+- IC 1245 -> Item 419
+  - Refers to item: Line (location: source ID 54, line 144, chars 4070-4112, hits: 0)
+- IC 1245 -> Item 420
+  - Refers to item: Statement (location: source ID 54, line 144, chars 4070-4112, hits: 0)
+
+Anchors for Contract "LibAddressSet" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 54):
+- IC 58 -> Item 446
+  - Refers to item: Function "getAddressAtIndex" (location: source ID 54, line 44, chars 1223-1355, hits: 0)
+- IC 109 -> Item 447
+  - Refers to item: Line (location: source ID 54, line 45, chars 1327-1348, hits: 0)
+- IC 109 -> Item 448
+  - Refers to item: Statement (location: source ID 54, line 45, chars 1327-1348, hits: 0)
+
+Anchors for Contract "WithdrawTokensFromContract" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 47):
+- IC 70 -> Item 486
+  - Refers to item: Function "withrawTokensFromContract" (location: source ID 47, line 115, chars 3542-3847, hits: 1)
+- IC 175 -> Item 487
+  - Refers to item: Line (location: source ID 47, line 116, chars 3625-3644, hits: 1)
+- IC 175 -> Item 488
+  - Refers to item: Statement (location: source ID 47, line 116, chars 3625-3644, hits: 1)
+- IC 270 -> Item 489
+  - Refers to item: Line (location: source ID 47, line 117, chars 3654-3812, hits: 1)
+- IC 270 -> Item 490
+  - Refers to item: Statement (location: source ID 47, line 117, chars 3654-3812, hits: 1)
+- IC 543 -> Item 491
+  - Refers to item: Line (location: source ID 47, line 120, chars 3822-3840, hits: 1)
+- IC 543 -> Item 492
+  - Refers to item: Statement (location: source ID 47, line 120, chars 3822-3840, hits: 1)
+- IC 98 -> Item 493
+  - Refers to item: Function "run" (location: source ID 47, line 123, chars 3853-4054, hits: 0)
+- IC 641 -> Item 494
+  - Refers to item: Line (location: source ID 47, line 124, chars 3887-3989, hits: 0)
+- IC 641 -> Item 495
+  - Refers to item: Statement (location: source ID 47, line 124, chars 3887-3989, hits: 0)
+- IC 643 -> Item 496
+  - Refers to item: Statement (location: source ID 47, line 124, chars 3919-3989, hits: 0)
+- IC 765 -> Item 497
+  - Refers to item: Line (location: source ID 47, line 125, chars 3999-4047, hits: 0)
+- IC 765 -> Item 498
+  - Refers to item: Statement (location: source ID 47, line 125, chars 3999-4047, hits: 0)
+
+Anchors for Contract "TestInvariants" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 53):
+- IC 261 -> Item 92
+  - Refers to item: Function "setUp" (location: source ID 53, line 27, chars 688-1400, hits: 2)
+- IC 672 -> Item 93
+  - Refers to item: Line (location: source ID 53, line 28, chars 733-771, hits: 2)
+- IC 672 -> Item 94
+  - Refers to item: Statement (location: source ID 53, line 28, chars 733-771, hits: 2)
+- IC 780 -> Item 95
+  - Refers to item: Line (location: source ID 53, line 29, chars 781-820, hits: 2)
+- IC 780 -> Item 96
+  - Refers to item: Statement (location: source ID 53, line 29, chars 781-820, hits: 2)
+- IC 1065 -> Item 97
+  - Refers to item: Line (location: source ID 53, line 31, chars 831-908, hits: 2)
+- IC 1065 -> Item 98
+  - Refers to item: Statement (location: source ID 53, line 31, chars 831-908, hits: 2)
+- IC 1417 -> Item 99
+  - Refers to item: Line (location: source ID 53, line 32, chars 918-960, hits: 2)
+- IC 1417 -> Item 100
+  - Refers to item: Statement (location: source ID 53, line 32, chars 918-960, hits: 2)
+- IC 1629 -> Item 101
+  - Refers to item: Line (location: source ID 53, line 34, chars 971-1005, hits: 2)
+- IC 1629 -> Item 102
+  - Refers to item: Statement (location: source ID 53, line 34, chars 971-1005, hits: 2)
+- IC 1820 -> Item 103
+  - Refers to item: Line (location: source ID 53, line 36, chars 1016-1041, hits: 2)
+- IC 1820 -> Item 104
+  - Refers to item: Statement (location: source ID 53, line 36, chars 1016-1041, hits: 2)
+- IC 1832 -> Item 105
+  - Refers to item: Line (location: source ID 53, line 37, chars 1051-1080, hits: 2)
+- IC 1832 -> Item 106
+  - Refers to item: Statement (location: source ID 53, line 37, chars 1051-1080, hits: 2)
+- IC 1877 -> Item 107
+  - Refers to item: Line (location: source ID 53, line 38, chars 1090-1118, hits: 2)
+- IC 1877 -> Item 108
+  - Refers to item: Statement (location: source ID 53, line 38, chars 1090-1118, hits: 2)
+- IC 1922 -> Item 109
+  - Refers to item: Line (location: source ID 53, line 39, chars 1128-1159, hits: 2)
+- IC 1922 -> Item 110
+  - Refers to item: Statement (location: source ID 53, line 39, chars 1128-1159, hits: 2)
+- IC 1967 -> Item 111
+  - Refers to item: Line (location: source ID 53, line 41, chars 1170-1213, hits: 2)
+- IC 1967 -> Item 112
+  - Refers to item: Statement (location: source ID 53, line 41, chars 1170-1213, hits: 2)
+- IC 1969 -> Item 113
+  - Refers to item: Statement (location: source ID 53, line 41, chars 1198-1213, hits: 2)
+- IC 2049 -> Item 114
+  - Refers to item: Line (location: source ID 53, line 42, chars 1223-1263, hits: 2)
+- IC 2049 -> Item 115
+  - Refers to item: Statement (location: source ID 53, line 42, chars 1223-1263, hits: 2)
+- IC 2156 -> Item 116
+  - Refers to item: Line (location: source ID 53, line 44, chars 1274-1350, hits: 2)
+- IC 2156 -> Item 117
+  - Refers to item: Statement (location: source ID 53, line 44, chars 1274-1350, hits: 2)
+- IC 2243 -> Item 118
+  - Refers to item: Line (location: source ID 53, line 46, chars 1361-1393, hits: 2)
+- IC 2243 -> Item 119
+  - Refers to item: Statement (location: source ID 53, line 46, chars 1361-1393, hits: 2)
+- IC 523 -> Item 120
+  - Refers to item: Function "invariant__TotalSupplyIsLessThanOrEqualMaxSupply" (location: source ID 53, line 49, chars 1406-1539, hits: 0)
+- IC 341 -> Item 123
+  - Refers to item: Function "invariant__TotalCollectedFees" (location: source ID 53, line 53, chars 1545-1803, hits: 0)
+
+Anchors for Contract "DeployFlameStarters" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 45):
+- IC 155 -> Item 465
+  - Refers to item: Function "run" (location: source ID 45, line 12, chars 415-1060, hits: 52)
+- IC 416 -> Item 466
+  - Refers to item: Line (location: source ID 45, line 13, chars 487-520, hits: 52)
+- IC 416 -> Item 467
+  - Refers to item: Statement (location: source ID 45, line 13, chars 487-520, hits: 52)
+- IC 524 -> Item 468
+  - Refers to item: Line (location: source ID 45, line 14, chars 530-631, hits: 52)
+- IC 524 -> Item 469
+  - Refers to item: Statement (location: source ID 45, line 14, chars 530-631, hits: 52)
+- IC 529 -> Item 470
+  - Refers to item: Statement (location: source ID 45, line 14, chars 597-631, hits: 52)
+- IC 683 -> Item 471
+  - Refers to item: Line (location: source ID 45, line 16, chars 642-686, hits: 52)
+- IC 683 -> Item 472
+  - Refers to item: Statement (location: source ID 45, line 16, chars 642-686, hits: 52)
+- IC 748 -> Item 473
+  - Refers to item: Line (location: source ID 45, line 17, chars 696-736, hits: 52)
+- IC 748 -> Item 474
+  - Refers to item: Statement (location: source ID 45, line 17, chars 696-736, hits: 52)
+- IC 813 -> Item 475
+  - Refers to item: Line (location: source ID 45, line 18, chars 746-790, hits: 52)
+- IC 813 -> Item 476
+  - Refers to item: Statement (location: source ID 45, line 18, chars 746-790, hits: 52)
+- IC 914 -> Item 477
+  - Refers to item: Line (location: source ID 45, line 21, chars 872-891, hits: 52)
+- IC 914 -> Item 478
+  - Refers to item: Statement (location: source ID 45, line 21, chars 872-891, hits: 52)
+- IC 1011 -> Item 479
+  - Refers to item: Line (location: source ID 45, line 22, chars 901-988, hits: 52)
+- IC 1011 -> Item 480
+  - Refers to item: Statement (location: source ID 45, line 22, chars 901-988, hits: 52)
+- IC 1013 -> Item 481
+  - Refers to item: Statement (location: source ID 45, line 22, chars 922-988, hits: 52)
+- IC 1115 -> Item 482
+  - Refers to item: Line (location: source ID 45, line 23, chars 998-1016, hits: 52)
+- IC 1115 -> Item 483
+  - Refers to item: Statement (location: source ID 45, line 23, chars 998-1016, hits: 52)
+- IC 1212 -> Item 484
+  - Refers to item: Line (location: source ID 45, line 24, chars 1026-1053, hits: 52)
+- IC 1212 -> Item 485
+  - Refers to item: Statement (location: source ID 45, line 24, chars 1026-1053, hits: 52)
+
+Anchors for Contract "SetNewEthFee" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 47):
+- IC 70 -> Item 45
+  - Refers to item: Function "setNewEthFee" (location: source ID 47, line 33, chars 917-1115, hits: 1)
+- IC 175 -> Item 46
+  - Refers to item: Line (location: source ID 47, line 34, chars 987-1006, hits: 1)
+- IC 175 -> Item 47
+  - Refers to item: Statement (location: source ID 47, line 34, chars 987-1006, hits: 1)
+- IC 270 -> Item 48
+  - Refers to item: Line (location: source ID 47, line 35, chars 1016-1080, hits: 1)
+- IC 270 -> Item 49
+  - Refers to item: Statement (location: source ID 47, line 35, chars 1016-1080, hits: 1)
+- IC 422 -> Item 50
+  - Refers to item: Line (location: source ID 47, line 36, chars 1090-1108, hits: 1)
+- IC 422 -> Item 51
+  - Refers to item: Statement (location: source ID 47, line 36, chars 1090-1108, hits: 1)
+- IC 98 -> Item 52
+  - Refers to item: Function "run" (location: source ID 47, line 39, chars 1121-1309, hits: 0)
+- IC 520 -> Item 53
+  - Refers to item: Line (location: source ID 47, line 40, chars 1155-1257, hits: 0)
+- IC 520 -> Item 54
+  - Refers to item: Statement (location: source ID 47, line 40, chars 1155-1257, hits: 0)
+- IC 522 -> Item 55
+  - Refers to item: Statement (location: source ID 47, line 40, chars 1187-1257, hits: 0)
+- IC 644 -> Item 56
+  - Refers to item: Line (location: source ID 47, line 41, chars 1267-1302, hits: 0)
+- IC 644 -> Item 57
+  - Refers to item: Statement (location: source ID 47, line 41, chars 1267-1302, hits: 0)
+
+Anchors for Contract "ApproveNft" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 48):
+- IC 70 -> Item 331
+  - Refers to item: Function "approveNft" (location: source ID 48, line 56, chars 1913-2109, hits: 1)
+- IC 175 -> Item 332
+  - Refers to item: Line (location: source ID 48, line 57, chars 1981-2000, hits: 1)
+- IC 175 -> Item 333
+  - Refers to item: Statement (location: source ID 48, line 57, chars 1981-2000, hits: 1)
+- IC 270 -> Item 334
+  - Refers to item: Line (location: source ID 48, line 58, chars 2010-2074, hits: 1)
+- IC 270 -> Item 335
+  - Refers to item: Statement (location: source ID 48, line 58, chars 2010-2074, hits: 1)
+- IC 450 -> Item 336
+  - Refers to item: Line (location: source ID 48, line 59, chars 2084-2102, hits: 1)
+- IC 450 -> Item 337
+  - Refers to item: Statement (location: source ID 48, line 59, chars 2084-2102, hits: 1)
+- IC 98 -> Item 338
+  - Refers to item: Function "run" (location: source ID 48, line 62, chars 2115-2301, hits: 0)
+- IC 548 -> Item 339
+  - Refers to item: Line (location: source ID 48, line 63, chars 2149-2251, hits: 0)
+- IC 548 -> Item 340
+  - Refers to item: Statement (location: source ID 48, line 63, chars 2149-2251, hits: 0)
+- IC 550 -> Item 341
+  - Refers to item: Statement (location: source ID 48, line 63, chars 2181-2251, hits: 0)
+- IC 672 -> Item 342
+  - Refers to item: Line (location: source ID 48, line 64, chars 2261-2294, hits: 0)
+- IC 672 -> Item 343
+  - Refers to item: Statement (location: source ID 48, line 64, chars 2261-2294, hits: 0)
+
+Anchors for Contract "SetNewTokenFee" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 47):
+- IC 80 -> Item 357
+  - Refers to item: Function "setNewTokenFee" (location: source ID 47, line 16, chars 415-617, hits: 1)
+- IC 311 -> Item 358
+  - Refers to item: Line (location: source ID 47, line 17, chars 487-506, hits: 1)
+- IC 311 -> Item 359
+  - Refers to item: Statement (location: source ID 47, line 17, chars 487-506, hits: 1)
+- IC 406 -> Item 360
+  - Refers to item: Line (location: source ID 47, line 18, chars 516-582, hits: 1)
+- IC 406 -> Item 361
+  - Refers to item: Statement (location: source ID 47, line 18, chars 516-582, hits: 1)
+- IC 558 -> Item 362
+  - Refers to item: Line (location: source ID 47, line 19, chars 592-610, hits: 1)
+- IC 558 -> Item 363
+  - Refers to item: Statement (location: source ID 47, line 19, chars 592-610, hits: 1)
+- IC 70 -> Item 364
+  - Refers to item: Function "run" (location: source ID 47, line 22, chars 623-813, hits: 0)
+- IC 139 -> Item 365
+  - Refers to item: Line (location: source ID 47, line 23, chars 657-759, hits: 0)
+- IC 139 -> Item 366
+  - Refers to item: Statement (location: source ID 47, line 23, chars 657-759, hits: 0)
+- IC 141 -> Item 367
+  - Refers to item: Statement (location: source ID 47, line 23, chars 689-759, hits: 0)
+- IC 263 -> Item 368
+  - Refers to item: Line (location: source ID 47, line 24, chars 769-806, hits: 0)
+- IC 263 -> Item 369
+  - Refers to item: Statement (location: source ID 47, line 24, chars 769-806, hits: 0)
+
+Anchors for Contract "MintNfts" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 48):
+- IC 81 -> Item 58
+  - Refers to item: Function "mintSingleNft" (location: source ID 48, line 9, chars 270-697, hits: 2)
+- IC 214 -> Item 59
+  - Refers to item: Line (location: source ID 48, line 10, chars 341-360, hits: 2)
+- IC 214 -> Item 60
+  - Refers to item: Statement (location: source ID 48, line 10, chars 341-360, hits: 2)
+- IC 309 -> Item 61
+  - Refers to item: Line (location: source ID 48, line 11, chars 370-397, hits: 2)
+- IC 309 -> Item 62
+  - Refers to item: Statement (location: source ID 48, line 11, chars 370-397, hits: 2)
+- IC 311 -> Item 63
+  - Refers to item: Statement (location: source ID 48, line 11, chars 388-397, hits: 2)
+- IC 314 -> Item 64
+  - Refers to item: Line (location: source ID 48, line 12, chars 407-548, hits: 2)
+- IC 314 -> Item 65
+  - Refers to item: Statement (location: source ID 48, line 12, chars 407-548, hits: 2)
+- IC 533 -> Item 66
+  - Refers to item: Line (location: source ID 48, line 15, chars 558-607, hits: 2)
+- IC 533 -> Item 67
+  - Refers to item: Statement (location: source ID 48, line 15, chars 558-607, hits: 2)
+- IC 643 -> Item 68
+  - Refers to item: Line (location: source ID 48, line 16, chars 617-635, hits: 2)
+- IC 643 -> Item 69
+  - Refers to item: Statement (location: source ID 48, line 16, chars 617-635, hits: 2)
+- IC 738 -> Item 70
+  - Refers to item: Line (location: source ID 48, line 17, chars 645-690, hits: 2)
+- IC 738 -> Item 71
+  - Refers to item: Statement (location: source ID 48, line 17, chars 645-690, hits: 2)
+- IC 149 -> Item 72
+  - Refers to item: Function "mintMultipleNfts" (location: source ID 48, line 20, chars 703-1138, hits: 1)
+- IC 996 -> Item 73
+  - Refers to item: Line (location: source ID 48, line 21, chars 777-796, hits: 1)
+- IC 996 -> Item 74
+  - Refers to item: Statement (location: source ID 48, line 21, chars 777-796, hits: 1)
+- IC 1091 -> Item 75
+  - Refers to item: Line (location: source ID 48, line 22, chars 806-833, hits: 1)
+- IC 1091 -> Item 76
+  - Refers to item: Statement (location: source ID 48, line 22, chars 806-833, hits: 1)
+- IC 1093 -> Item 77
+  - Refers to item: Statement (location: source ID 48, line 22, chars 824-833, hits: 1)
+- IC 1096 -> Item 78
+  - Refers to item: Line (location: source ID 48, line 23, chars 843-988, hits: 1)
+- IC 1096 -> Item 79
+  - Refers to item: Statement (location: source ID 48, line 23, chars 843-988, hits: 1)
+- IC 1327 -> Item 80
+  - Refers to item: Line (location: source ID 48, line 26, chars 998-1047, hits: 1)
+- IC 1327 -> Item 81
+  - Refers to item: Statement (location: source ID 48, line 26, chars 998-1047, hits: 1)
+- IC 1437 -> Item 82
+  - Refers to item: Line (location: source ID 48, line 27, chars 1057-1075, hits: 1)
+- IC 1437 -> Item 83
+  - Refers to item: Statement (location: source ID 48, line 27, chars 1057-1075, hits: 1)
+- IC 1532 -> Item 84
+  - Refers to item: Line (location: source ID 48, line 29, chars 1086-1131, hits: 1)
+- IC 1532 -> Item 85
+  - Refers to item: Statement (location: source ID 48, line 29, chars 1086-1131, hits: 1)
+- IC 109 -> Item 86
+  - Refers to item: Function "run" (location: source ID 48, line 32, chars 1144-1336, hits: 0)
+- IC 805 -> Item 87
+  - Refers to item: Line (location: source ID 48, line 33, chars 1178-1280, hits: 0)
+- IC 805 -> Item 88
+  - Refers to item: Statement (location: source ID 48, line 33, chars 1178-1280, hits: 0)
+- IC 807 -> Item 89
+  - Refers to item: Statement (location: source ID 48, line 33, chars 1210-1280, hits: 0)
+- IC 929 -> Item 90
+  - Refers to item: Line (location: source ID 48, line 34, chars 1290-1329, hits: 0)
+- IC 929 -> Item 91
+  - Refers to item: Statement (location: source ID 48, line 34, chars 1290-1329, hits: 0)
+
+Anchors for Contract "FlameStarters" (solc 0.8.20+commit.a1b79de6.Linux.gcc, source ID 50):
+- IC 1455 -> Item 141
+  - Refers to item: Function "mint" (location: source ID 50, line 81, chars 3143-4174, hits: 400)
+- IC 4307 -> Item 142
+  - Refers to item: Line (location: source ID 50, line 82, chars 3206-3219, hits: 400)
+- IC 4307 -> Item 143
+  - Refers to item: Statement (location: source ID 50, line 82, chars 3206-3219, hits: 400)
+- IC 4315 -> Item 144
+  - Refers to item: Branch (branch: 0, path: 0) (location: source ID 50, line 82, chars 3202-3268, hits: 1)
+- IC 4364 -> Item 145
+  - Refers to item: Branch (branch: 0, path: 1) (location: source ID 50, line 82, chars 3202-3268, hits: 399)
+- IC 4315 -> Item 146
+  - Refers to item: Statement (location: source ID 50, line 82, chars 3221-3268, hits: 1)
+- IC 4365 -> Item 147
+  - Refers to item: Line (location: source ID 50, line 83, chars 3282-3331, hits: 399)
+- IC 4365 -> Item 148
+  - Refers to item: Statement (location: source ID 50, line 83, chars 3282-3331, hits: 399)
+- IC 4368 -> Item 149
+  - Refers to item: Statement (location: source ID 50, line 83, chars 3282-3314, hits: 399)
+- IC 4369 -> Item 150
+  - Refers to item: Statement (location: source ID 50, line 83, chars 3282-3303, hits: 399)
+- IC 4394 -> Item 151
+  - Refers to item: Branch (branch: 1, path: 0) (location: source ID 50, line 83, chars 3278-3400, hits: 1)
+- IC 4443 -> Item 152
+  - Refers to item: Branch (branch: 1, path: 1) (location: source ID 50, line 83, chars 3278-3400, hits: 398)
+- IC 4394 -> Item 153
+  - Refers to item: Line (location: source ID 50, line 84, chars 3347-3389, hits: 1)
+- IC 4394 -> Item 154
+  - Refers to item: Statement (location: source ID 50, line 84, chars 3347-3389, hits: 1)
+- IC 4444 -> Item 155
+  - Refers to item: Line (location: source ID 50, line 86, chars 3413-3436, hits: 398)
+- IC 4444 -> Item 156
+  - Refers to item: Statement (location: source ID 50, line 86, chars 3413-3436, hits: 398)
+- IC 4454 -> Item 157
+  - Refers to item: Branch (branch: 2, path: 0) (location: source ID 50, line 86, chars 3409-3478, hits: 1)
+- IC 4503 -> Item 158
+  - Refers to item: Branch (branch: 2, path: 1) (location: source ID 50, line 86, chars 3409-3478, hits: 397)
+- IC 4454 -> Item 159
+  - Refers to item: Statement (location: source ID 50, line 86, chars 3438-3478, hits: 1)
+- IC 4506 -> Item 160
+  - Refers to item: Line (location: source ID 50, line 87, chars 3492-3529, hits: 397)
+- IC 4506 -> Item 161
+  - Refers to item: Statement (location: source ID 50, line 87, chars 3492-3529, hits: 397)
+- IC 4506 -> Item 162
+  - Refers to item: Statement (location: source ID 50, line 87, chars 3492-3516, hits: 397)
+- IC 4507 -> Item 163
+  - Refers to item: Statement (location: source ID 50, line 87, chars 3492-3505, hits: 397)
+- IC 4531 -> Item 164
+  - Refers to item: Branch (branch: 3, path: 0) (location: source ID 50, line 87, chars 3488-3570, hits: 1)
+- IC 4580 -> Item 165
+  - Refers to item: Branch (branch: 3, path: 1) (location: source ID 50, line 87, chars 3488-3570, hits: 396)
+- IC 4531 -> Item 166
+  - Refers to item: Statement (location: source ID 50, line 87, chars 3531-3570, hits: 1)
+- IC 4581 -> Item 167
+  - Refers to item: Line (location: source ID 50, line 89, chars 3585-3645, hits: 396)
+- IC 4581 -> Item 168
+  - Refers to item: Statement (location: source ID 50, line 89, chars 3585-3645, hits: 396)
+- IC 4595 -> Item 169
+  - Refers to item: Statement (location: source ID 50, line 89, chars 3585-3621, hits: 396)
+- IC 4581 -> Item 170
+  - Refers to item: Statement (location: source ID 50, line 89, chars 3624-3645, hits: 396)
+- IC 4755 -> Item 171
+  - Refers to item: Branch (branch: 4, path: 0) (location: source ID 50, line 89, chars 3581-3719, hits: 1)
+- IC 4804 -> Item 172
+  - Refers to item: Branch (branch: 4, path: 1) (location: source ID 50, line 89, chars 3581-3719, hits: 395)
+- IC 4755 -> Item 173
+  - Refers to item: Line (location: source ID 50, line 90, chars 3661-3708, hits: 1)
+- IC 4755 -> Item 174
+  - Refers to item: Statement (location: source ID 50, line 90, chars 3661-3708, hits: 1)
+- IC 4805 -> Item 175
+  - Refers to item: Line (location: source ID 50, line 92, chars 3732-3763, hits: 395)
+- IC 4805 -> Item 176
+  - Refers to item: Statement (location: source ID 50, line 92, chars 3732-3763, hits: 395)
+- IC 4805 -> Item 177
+  - Refers to item: Statement (location: source ID 50, line 92, chars 3744-3763, hits: 395)
+- IC 4826 -> Item 178
+  - Refers to item: Branch (branch: 5, path: 0) (location: source ID 50, line 92, chars 3728-3825, hits: 1)
+- IC 4890 -> Item 179
+  - Refers to item: Branch (branch: 5, path: 1) (location: source ID 50, line 92, chars 3728-3825, hits: 394)
+- IC 4826 -> Item 180
+  - Refers to item: Statement (location: source ID 50, line 92, chars 3765-3825, hits: 1)
+- IC 4891 -> Item 181
+  - Refers to item: Line (location: source ID 50, line 94, chars 3836-3863, hits: 394)
+- IC 4891 -> Item 182
+  - Refers to item: Statement (location: source ID 50, line 94, chars 3836-3863, hits: 394)
+- IC 4901 -> Item 183
+  - Refers to item: Line (location: source ID 50, line 96, chars 3874-3940, hits: 394)
+- IC 4901 -> Item 184
+  - Refers to item: Statement (location: source ID 50, line 96, chars 3874-3940, hits: 394)
+- IC 4903 -> Item 185
+  - Refers to item: Statement (location: source ID 50, line 96, chars 3892-3940, hits: 394)
+- IC 5043 -> Item 186
+  - Refers to item: Line (location: source ID 50, line 97, chars 3954-3962, hits: 394)
+- IC 5043 -> Item 187
+  - Refers to item: Statement (location: source ID 50, line 97, chars 3954-3962, hits: 394)
+- IC 5048 -> Item 188
+  - Refers to item: Branch (branch: 6, path: 0) (location: source ID 50, line 97, chars 3950-4004, hits: 0)
+- IC 5097 -> Item 189
+  - Refers to item: Branch (branch: 6, path: 1) (location: source ID 50, line 97, chars 3950-4004, hits: 394)
+- IC 5048 -> Item 190
+  - Refers to item: Statement (location: source ID 50, line 97, chars 3964-4004, hits: 0)
+- IC 5098 -> Item 191
+  - Refers to item: Line (location: source ID 50, line 99, chars 4015-4101, hits: 394)
+- IC 5098 -> Item 192
+  - Refers to item: Statement (location: source ID 50, line 99, chars 4015-4101, hits: 394)
+- IC 5307 -> Item 193
+  - Refers to item: Line (location: source ID 50, line 100, chars 4115-4123, hits: 394)
+- IC 5307 -> Item 194
+  - Refers to item: Statement (location: source ID 50, line 100, chars 4115-4123, hits: 394)
+- IC 5312 -> Item 195
+  - Refers to item: Branch (branch: 7, path: 0) (location: source ID 50, line 100, chars 4111-4167, hits: 1)
+- IC 5361 -> Item 196
+  - Refers to item: Branch (branch: 7, path: 1) (location: source ID 50, line 100, chars 4111-4167, hits: 393)
+- IC 5312 -> Item 197
+  - Refers to item: Statement (location: source ID 50, line 100, chars 4125-4167, hits: 1)
+- IC 817 -> Item 198
+  - Refers to item: Function "setTokenFee" (location: source ID 50, line 105, chars 4294-4423, hits: 308)
+- IC 3408 -> Item 199
+  - Refers to item: Line (location: source ID 50, line 106, chars 4357-4373, hits: 307)
+- IC 3408 -> Item 200
+  - Refers to item: Statement (location: source ID 50, line 106, chars 4357-4373, hits: 307)
+- IC 3415 -> Item 201
+  - Refers to item: Line (location: source ID 50, line 107, chars 4383-4416, hits: 307)
+- IC 3415 -> Item 202
+  - Refers to item: Statement (location: source ID 50, line 107, chars 4383-4416, hits: 307)
+- IC 901 -> Item 203
+  - Refers to item: Function "setEthFee" (location: source ID 50, line 112, chars 4516-4639, hits: 307)
+- IC 3514 -> Item 204
+  - Refers to item: Line (location: source ID 50, line 113, chars 4577-4591, hits: 306)
+- IC 3514 -> Item 205
+  - Refers to item: Statement (location: source ID 50, line 113, chars 4577-4591, hits: 306)
+- IC 3521 -> Item 206
+  - Refers to item: Line (location: source ID 50, line 114, chars 4601-4632, hits: 306)
+- IC 3521 -> Item 207
+  - Refers to item: Statement (location: source ID 50, line 114, chars 4601-4632, hits: 306)
+- IC 1328 -> Item 208
+  - Refers to item: Function "setFeeAddress" (location: source ID 50, line 119, chars 4801-5015, hits: 4)
+- IC 3949 -> Item 209
+  - Refers to item: Line (location: source ID 50, line 120, chars 4877-4901, hits: 3)
+- IC 3949 -> Item 210
+  - Refers to item: Statement (location: source ID 50, line 120, chars 4877-4901, hits: 3)
+- IC 3949 -> Item 211
+  - Refers to item: Statement (location: source ID 50, line 120, chars 4891-4901, hits: 3)
+- IC 4001 -> Item 212
+  - Refers to item: Branch (branch: 8, path: 0) (location: source ID 50, line 120, chars 4873-4974, hits: 1)
+- IC 4050 -> Item 213
+  - Refers to item: Branch (branch: 8, path: 1) (location: source ID 50, line 120, chars 4873-4974, hits: 2)
+- IC 4001 -> Item 214
+  - Refers to item: Line (location: source ID 50, line 121, chars 4917-4963, hits: 1)
+- IC 4001 -> Item 215
+  - Refers to item: Statement (location: source ID 50, line 121, chars 4917-4963, hits: 1)
+- IC 4051 -> Item 216
+  - Refers to item: Line (location: source ID 50, line 123, chars 4983-5008, hits: 2)
+- IC 4051 -> Item 217
+  - Refers to item: Statement (location: source ID 50, line 123, chars 4983-5008, hits: 2)
+- IC 1760 -> Item 218
+  - Refers to item: Function "setMaxPerWallet" (location: source ID 50, line 128, chars 5176-5583, hits: 311)
+- IC 6243 -> Item 219
+  - Refers to item: Line (location: source ID 50, line 129, chars 5256-5281, hits: 310)
+- IC 6243 -> Item 220
+  - Refers to item: Statement (location: source ID 50, line 129, chars 5256-5281, hits: 310)
+- IC 6250 -> Item 221
+  - Refers to item: Branch (branch: 9, path: 0) (location: source ID 50, line 129, chars 5252-5359, hits: 1)
+- IC 6299 -> Item 222
+  - Refers to item: Branch (branch: 9, path: 1) (location: source ID 50, line 129, chars 5252-5359, hits: 309)
+- IC 6250 -> Item 223
+  - Refers to item: Line (location: source ID 50, line 130, chars 5297-5348, hits: 1)
+- IC 6250 -> Item 224
+  - Refers to item: Statement (location: source ID 50, line 130, chars 5297-5348, hits: 1)
+- IC 6300 -> Item 225
+  - Refers to item: Line (location: source ID 50, line 132, chars 5372-5399, hits: 309)
+- IC 6300 -> Item 226
+  - Refers to item: Statement (location: source ID 50, line 132, chars 5372-5399, hits: 309)
+- IC 6310 -> Item 227
+  - Refers to item: Branch (branch: 10, path: 0) (location: source ID 50, line 132, chars 5368-5482, hits: 1)
+- IC 6359 -> Item 228
+  - Refers to item: Branch (branch: 10, path: 1) (location: source ID 50, line 132, chars 5368-5482, hits: 308)
+- IC 6310 -> Item 229
+  - Refers to item: Line (location: source ID 50, line 133, chars 5415-5471, hits: 1)
+- IC 6310 -> Item 230
+  - Refers to item: Statement (location: source ID 50, line 133, chars 5415-5471, hits: 1)
+- IC 6360 -> Item 231
+  - Refers to item: Line (location: source ID 50, line 135, chars 5491-5520, hits: 308)
+- IC 6360 -> Item 232
+  - Refers to item: Statement (location: source ID 50, line 135, chars 5491-5520, hits: 308)
+- IC 6367 -> Item 233
+  - Refers to item: Line (location: source ID 50, line 136, chars 5530-5576, hits: 308)
+- IC 6367 -> Item 234
+  - Refers to item: Statement (location: source ID 50, line 136, chars 5530-5576, hits: 308)
+- IC 1862 -> Item 235
+  - Refers to item: Function "setBatchLimit" (location: source ID 50, line 141, chars 5763-6110, hits: 329)
+- IC 6604 -> Item 236
+  - Refers to item: Line (location: source ID 50, line 142, chars 5839-5855, hits: 328)
+- IC 6604 -> Item 237
+  - Refers to item: Statement (location: source ID 50, line 142, chars 5839-5855, hits: 328)
+- IC 6613 -> Item 238
+  - Refers to item: Branch (branch: 11, path: 0) (location: source ID 50, line 142, chars 5835-5897, hits: 1)
+- IC 6662 -> Item 239
+  - Refers to item: Branch (branch: 11, path: 1) (location: source ID 50, line 142, chars 5835-5897, hits: 327)
+- IC 6613 -> Item 240
+  - Refers to item: Statement (location: source ID 50, line 142, chars 5857-5897, hits: 1)
+- IC 6663 -> Item 241
+  - Refers to item: Line (location: source ID 50, line 143, chars 5911-5938, hits: 327)
+- IC 6663 -> Item 242
+  - Refers to item: Statement (location: source ID 50, line 143, chars 5911-5938, hits: 327)
+- IC 6673 -> Item 243
+  - Refers to item: Branch (branch: 12, path: 0) (location: source ID 50, line 143, chars 5907-6017, hits: 1)
+- IC 6722 -> Item 244
+  - Refers to item: Branch (branch: 12, path: 1) (location: source ID 50, line 143, chars 5907-6017, hits: 326)
+- IC 6673 -> Item 245
+  - Refers to item: Line (location: source ID 50, line 144, chars 5954-6006, hits: 1)
+- IC 6673 -> Item 246
+  - Refers to item: Statement (location: source ID 50, line 144, chars 5954-6006, hits: 1)
+- IC 6723 -> Item 247
+  - Refers to item: Line (location: source ID 50, line 146, chars 6026-6051, hits: 326)
+- IC 6723 -> Item 248
+  - Refers to item: Statement (location: source ID 50, line 146, chars 6026-6051, hits: 326)
+- IC 6730 -> Item 249
+  - Refers to item: Line (location: source ID 50, line 147, chars 6061-6103, hits: 326)
+- IC 6730 -> Item 250
+  - Refers to item: Statement (location: source ID 50, line 147, chars 6061-6103, hits: 326)
+- IC 1524 -> Item 251
+  - Refers to item: Function "withdrawTokens" (location: source ID 50, line 154, chars 6351-6656, hits: 3)
+- IC 5643 -> Item 252
+  - Refers to item: Line (location: source ID 50, line 155, chars 6474-6517, hits: 2)
+- IC 5643 -> Item 253
+  - Refers to item: Statement (location: source ID 50, line 155, chars 6474-6517, hits: 2)
+- IC 5645 -> Item 254
+  - Refers to item: Statement (location: source ID 50, line 155, chars 6497-6517, hits: 2)
+- IC 5648 -> Item 255
+  - Refers to item: Line (location: source ID 50, line 156, chars 6527-6582, hits: 2)
+- IC 5648 -> Item 256
+  - Refers to item: Statement (location: source ID 50, line 156, chars 6527-6582, hits: 2)
+- IC 5650 -> Item 257
+  - Refers to item: Statement (location: source ID 50, line 156, chars 6544-6582, hits: 2)
+- IC 5774 -> Item 258
+  - Refers to item: Line (location: source ID 50, line 157, chars 6592-6649, hits: 2)
+- IC 5774 -> Item 259
+  - Refers to item: Statement (location: source ID 50, line 157, chars 6592-6649, hits: 2)
+- IC 1717 -> Item 260
+  - Refers to item: Function "getPaymentToken" (location: source ID 50, line 165, chars 6746-6852, hits: 55)
+- IC 6195 -> Item 261
+  - Refers to item: Line (location: source ID 50, line 166, chars 6815-6845, hits: 55)
+- IC 6195 -> Item 262
+  - Refers to item: Statement (location: source ID 50, line 166, chars 6815-6845, hits: 55)
+- IC 6195 -> Item 263
+  - Refers to item: Statement (location: source ID 50, line 166, chars 6822-6845, hits: 55)
+- IC 1054 -> Item 264
+  - Refers to item: Function "getMaxSupply" (location: source ID 50, line 170, chars 6894-6984, hits: 2)
+- IC 3662 -> Item 265
+  - Refers to item: Line (location: source ID 50, line 171, chars 6960-6977, hits: 2)
+- IC 3662 -> Item 266
+  - Refers to item: Statement (location: source ID 50, line 171, chars 6960-6977, hits: 2)
+- IC 858 -> Item 267
+  - Refers to item: Function "getTokenFee" (location: source ID 50, line 175, chars 7038-7127, hits: 14)
+- IC 3498 -> Item 268
+  - Refers to item: Line (location: source ID 50, line 176, chars 7103-7120, hits: 14)
+- IC 3498 -> Item 269
+  - Refers to item: Statement (location: source ID 50, line 176, chars 7103-7120, hits: 14)
+- IC 1011 -> Item 270
+  - Refers to item: Function "getEthFee" (location: source ID 50, line 180, chars 7173-7258, hits: 20)
+- IC 3650 -> Item 271
+  - Refers to item: Line (location: source ID 50, line 181, chars 7236-7251, hits: 20)
+- IC 3650 -> Item 272
+  - Refers to item: Statement (location: source ID 50, line 181, chars 7236-7251, hits: 20)
+- IC 1097 -> Item 273
+  - Refers to item: Function "getFeeAddress" (location: source ID 50, line 185, chars 7320-7413, hits: 8)
+- IC 3669 -> Item 274
+  - Refers to item: Line (location: source ID 50, line 186, chars 7387-7406, hits: 8)
+- IC 3669 -> Item 275
+  - Refers to item: Statement (location: source ID 50, line 186, chars 7387-7406, hits: 8)
+- IC 1674 -> Item 276
+  - Refers to item: Function "getBatchLimit" (location: source ID 50, line 190, chars 7478-7571, hits: 3)
+- IC 6185 -> Item 277
+  - Refers to item: Line (location: source ID 50, line 191, chars 7545-7564, hits: 3)
+- IC 6185 -> Item 278
+  - Refers to item: Statement (location: source ID 50, line 191, chars 7545-7564, hits: 3)
+- IC 1201 -> Item 279
+  - Refers to item: Function "getMaxPerWallet" (location: source ID 50, line 195, chars 7641-7738, hits: 3)
+- IC 3729 -> Item 280
+  - Refers to item: Line (location: source ID 50, line 196, chars 7710-7731, hits: 3)
+- IC 3729 -> Item 281
+  - Refers to item: Statement (location: source ID 50, line 196, chars 7710-7731, hits: 3)
+- IC 703 -> Item 282
+  - Refers to item: Function "getBaseUri" (location: source ID 50, line 200, chars 7774-7868, hits: 1)
+- IC 2562 -> Item 283
+  - Refers to item: Line (location: source ID 50, line 201, chars 7844-7861, hits: 1)
+- IC 2562 -> Item 284
+  - Refers to item: Statement (location: source ID 50, line 201, chars 7844-7861, hits: 1)
+- IC 2562 -> Item 285
+  - Refers to item: Statement (location: source ID 50, line 201, chars 7851-7861, hits: 1)
+- IC 510 -> Item 286
+  - Refers to item: Function "supportsInterface" (location: source ID 50, line 211, chars 8065-8227, hits: 1)
+- IC 1947 -> Item 287
+  - Refers to item: Line (location: source ID 50, line 212, chars 8177-8220, hits: 1)
+- IC 1947 -> Item 288
+  - Refers to item: Statement (location: source ID 50, line 212, chars 8177-8220, hits: 1)
+- IC 1947 -> Item 289
+  - Refers to item: Statement (location: source ID 50, line 212, chars 8184-8220, hits: 1)
+- IC 7339 -> Item 290
+  - Refers to item: Function "_startTokenId" (location: source ID 50, line 219, chars 8323-8431, hits: 936)
+- IC 7342 -> Item 291
+  - Refers to item: Line (location: source ID 50, line 220, chars 8416-8424, hits: 936)
+- IC 7342 -> Item 292
+  - Refers to item: Statement (location: source ID 50, line 220, chars 8416-8424, hits: 936)
+- IC 7193 -> Item 296
+  - Refers to item: Function "_baseURI" (location: source ID 50, line 230, chars 8650-8755, hits: 356)
+- IC 7196 -> Item 297
+  - Refers to item: Line (location: source ID 50, line 231, chars 8727-8748, hits: 356)
+- IC 7196 -> Item 298
+  - Refers to item: Statement (location: source ID 50, line 231, chars 8727-8748, hits: 356)
+

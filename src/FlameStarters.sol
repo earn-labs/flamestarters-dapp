@@ -3,8 +3,6 @@ pragma solidity ^0.8.20;
 
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
-import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
-import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
 import {ERC721A, IERC721A} from "@erc721a/contracts/ERC721A.sol";
 import {ERC721ABurnable} from "@erc721a/contracts/extensions/ERC721ABurnable.sol";
@@ -12,7 +10,7 @@ import {ERC721ABurnable} from "@erc721a/contracts/extensions/ERC721ABurnable.sol
 /// @title FlameStarters NFTs
 /// @author Nadina Oates
 /// @notice Contract implementing ERC721 standard using the ERC20 token for minting
-contract FlameStarters is ERC721A, ERC721ABurnable, Ownable, ReentrancyGuard {
+contract FlameStarters is ERC721A, ERC721ABurnable, Ownable {
     /**
      * Errors
      */
@@ -80,26 +78,19 @@ contract FlameStarters is ERC721A, ERC721ABurnable, Ownable, ReentrancyGuard {
 
     /// @notice Mints NFT for a eth and a token fee
     /// @param quantity number of NFTs to mint
-    function mint(uint256 quantity) external payable nonReentrant {
+    function mint(uint256 quantity) external payable {
         if (quantity == 0) revert FlameStarters_InsufficientMintQuantity();
         if (balanceOf(msg.sender) + quantity > s_maxPerWallet) {
             revert FlameStarters_ExceedsMaxPerWallet();
         }
         if (quantity > s_batchLimit) revert FlameStarters_ExceedsBatchLimit();
-        if (_totalSupply() + quantity > MAX_SUPPLY) revert FlameStarters_ExceedsMaxSupply();
+        if (totalSupply() + quantity > MAX_SUPPLY) revert FlameStarters_ExceedsMaxSupply();
 
         if (i_paymentToken.balanceOf(msg.sender) < s_tokenFee * quantity) {
             revert FlameStarters_InsufficientTokenBalance();
         }
         if (msg.value < s_ethFee * quantity) revert FlameStarters_InsufficientEthFee(msg.value, s_ethFee);
 
-        uint256 tokenId = _nextTokenId();
-        for (uint256 i = 0; i < quantity; i++) {
-            unchecked {
-                _setTokenURI(tokenId, Strings.toString(_randomTokenURI()));
-                tokenId++;
-            }
-        }
         _mint(msg.sender, quantity);
 
         (bool success,) = payable(s_feeAddress).call{value: msg.value}("");
@@ -214,23 +205,6 @@ contract FlameStarters is ERC721A, ERC721ABurnable, Ownable, ReentrancyGuard {
      * Public Functions
      */
 
-    /// @notice retrieves tokenURI
-    /// @dev adapted from openzeppelin ERC721URIStorage contract
-    /// @param tokenId tokenID of NFT
-    function tokenURI(uint256 tokenId) public view override(ERC721A, IERC721A) returns (string memory) {
-        _requireOwned(tokenId);
-
-        string memory _tokenURI = s_tokenURIs[tokenId];
-        string memory base = _baseURI();
-
-        // If both are set, concatenate the baseURI and tokenURI (via string.concat).
-        if (bytes(_tokenURI).length > 0) {
-            return string.concat(base, _tokenURI);
-        }
-
-        return super.tokenURI(tokenId);
-    }
-
     /// @notice checks for supported interface
     /// @dev function override required by ERC721
     /// @param interfaceId interfaceId to be checked
@@ -241,17 +215,9 @@ contract FlameStarters is ERC721A, ERC721ABurnable, Ownable, ReentrancyGuard {
     /**
      * Internal/Private Functions
      */
-
-    /// @notice Checks if token owner exists
-    /// @dev adapted code from openzeppelin ERC721
-    /// @param tokenId token id of NFT
-    function _requireOwned(uint256 tokenId) internal view {
-        ownerOf(tokenId);
-    }
-
-    /// @notice returns total supply
-    function _totalSupply() private view returns (uint256) {
-        return _nextTokenId();
+    /// @notice sets first tokenId to 1
+    function _startTokenId() internal view virtual override(ERC721A) returns (uint256) {
+        return 1;
     }
 
     /// @notice Sets base uri
@@ -263,30 +229,5 @@ contract FlameStarters is ERC721A, ERC721ABurnable, Ownable, ReentrancyGuard {
     /// @notice Retrieves base uri
     function _baseURI() internal view override returns (string memory) {
         return s_baseTokenURI;
-    }
-
-    /// @notice Checks if token owner exists
-    /// @dev adapted code from openzeppelin ERC721URIStorage
-    function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal virtual {
-        s_tokenURIs[tokenId] = _tokenURI;
-        emit MetadataUpdate(tokenId);
-    }
-
-    /// @notice generates a random tokenUR
-    function _randomTokenURI() private returns (uint256 randomTokenURI) {
-        uint256 numAvailableURIs = s_ids.length;
-        uint256 randIdx;
-
-        unchecked {
-            randIdx =
-                uint256(keccak256(abi.encodePacked(block.prevrandao, msg.sender, block.timestamp))) % numAvailableURIs;
-        }
-
-        // get new and nonexisting random id
-        randomTokenURI = (s_ids[randIdx] != 0) ? s_ids[randIdx] : randIdx;
-
-        // update helper array
-        s_ids[randIdx] = (s_ids[numAvailableURIs - 1] == 0) ? numAvailableURIs - 1 : s_ids[numAvailableURIs - 1];
-        s_ids.pop();
     }
 }
