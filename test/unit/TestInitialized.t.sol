@@ -25,11 +25,11 @@ contract TestInitialized is Test {
     address tokenAddress;
 
     // helper variables
-    uint256 constant TOKEN_FEE = 10_000 ether;
-    uint256 constant ETH_FEE = 0.001 ether;
-    uint256 constant MAX_SUPPLY = 10000;
+    uint256 constant TOKEN_FEE = 1_000_000 ether;
+    uint256 constant ETH_FEE = 0.1 ether;
+    uint256 constant MAX_SUPPLY = 177;
     uint256 constant BATCH_LIMIT = 0;
-    uint256 constant MAX_PER_WALLET = 10;
+    uint256 constant MAX_PER_WALLET = 5;
 
     function setUp() external virtual {
         deployment = new DeployFlameStarters();

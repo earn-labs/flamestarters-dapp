@@ -49,7 +49,7 @@ This repository contains the smart contract and deployment/testing suite to crea
 ### Smart Contracts on BSC Testnet
 
 **Payment Token Contract**  
-
+https://testnet.bscscan.com/address/0x17ce1f8de9235ec9aacd58c56de5f8ea4bd8e063
 
 **NFT Contract**  
 

@@ -52,7 +52,7 @@ contract Handler is CommonBase, StdCheats, StdUtils, Test {
     AddressSet internal _actors;
     address internal currentActor;
 
-    uint256 constant MAX_SUPPLY = 10_000;
+    uint256 constant MAX_SUPPLY = 177;
     uint256 constant FUZZ_FEE = 100 ether;
     uint256 constant FUZZ_ETH_FEE = 0.00001 ether;
 
@@ -108,7 +108,7 @@ contract Handler is CommonBase, StdCheats, StdUtils, Test {
 
         // setup nft contract
         vm.startPrank(nfts.owner());
-        nfts.setMaxPerWallet(10_000);
+        nfts.setMaxPerWallet(177);
         nfts.setBatchLimit(100);
         nfts.setTokenFee(FUZZ_FEE);
         nfts.setEthFee(FUZZ_ETH_FEE);
@@ -124,7 +124,7 @@ contract Handler is CommonBase, StdCheats, StdUtils, Test {
 
     function mintNfts(uint256 actorSeed, uint256 amount) public useActor(actorSeed) countCall("mint") {
         _actors.add(msg.sender);
-        amount = bound(amount, 1, 100);
+        amount = bound(amount, 1, 5);
 
         uint256 totalEthFee = amount * FUZZ_ETH_FEE;
         uint256 totalFee = amount * FUZZ_FEE;

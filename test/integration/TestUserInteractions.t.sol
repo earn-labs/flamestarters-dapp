@@ -26,6 +26,7 @@ contract UserInteractionsTest is Test {
     address USER = makeAddr("user");
     address OWNER;
     uint256 constant STARTING_BALANCE = 10_000_000 ether;
+    uint256 constant MAX_PER_WALLET = 5;
 
     modifier fundedAndApproved() {
         // fund user with eth
@@ -41,7 +42,7 @@ contract UserInteractionsTest is Test {
 
     modifier mintOpen() {
         vm.startPrank(OWNER);
-        nftContract.setBatchLimit(10);
+        nftContract.setBatchLimit(MAX_PER_WALLET - 1);
         vm.stopPrank();
         _;
     }

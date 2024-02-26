@@ -38,7 +38,7 @@ contract TestDeployment is TestInitialized {
     }
 
     function test__GetterFunctions() public {
-        assertEq(nfts.getMaxSupply(), 10000);
+        assertEq(nfts.getMaxSupply(), MAX_SUPPLY);
         assertEq(nfts.supportsInterface(0x80ac58cd), true);
 
         vm.expectRevert(IERC721A.OwnerQueryForNonexistentToken.selector);

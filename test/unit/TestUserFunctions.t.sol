@@ -46,7 +46,7 @@ contract TestUserFunctions is TestInitialized {
 
     modifier funded(address account) {
         // fund user ETH
-        deal(account, 10 ether);
+        deal(account, 100 ether);
 
         // fund user tokens
         vm.startPrank(token.owner());
@@ -58,14 +58,14 @@ contract TestUserFunctions is TestInitialized {
     modifier mintOpen() {
         // fund user
         vm.startPrank(token.owner());
-        nfts.setBatchLimit(10);
+        nfts.setBatchLimit(MAX_PER_WALLET);
         vm.stopPrank();
         _;
     }
 
     modifier maxMintAllowed() {
         vm.startPrank(token.owner());
-        nfts.setMaxPerWallet(10_000);
+        nfts.setMaxPerWallet(MAX_SUPPLY);
         nfts.setBatchLimit(100);
         nfts.setTokenFee(FUZZ_FEE);
         nfts.setEthFee(FUZZ_ETH_FEE);
@@ -102,14 +102,14 @@ contract TestUserFunctions is TestInitialized {
     }
 
     function test__MintAllNFTs() public funded(USER1) maxMintAllowed {
-        uint256 ethFee = 100 * nfts.getEthFee();
-        uint256 tokenFee = 100 * nfts.getTokenFee();
+        uint256 ethFee = nfts.getEthFee();
+        uint256 tokenFee = nfts.getTokenFee();
 
-        for (uint256 index = 0; index < 100; index++) {
+        for (uint256 index = 0; index < MAX_SUPPLY; index++) {
             vm.roll(index);
             vm.startPrank(USER1);
             token.approve(address(nfts), tokenFee);
-            nfts.mint{value: ethFee}(100);
+            nfts.mint{value: ethFee}(1);
             vm.stopPrank();
         }
 
@@ -213,10 +213,10 @@ contract TestUserFunctions is TestInitialized {
 
     function test__RevertWhen__MintExceedsMaxWalletLimit() public funded(USER1) mintOpen {
         uint256 ethFee = nfts.getEthFee();
-        uint256 tokenFee = 11 * nfts.getTokenFee();
+        uint256 tokenFee = (MAX_PER_WALLET + 1) * nfts.getTokenFee();
         vm.startPrank(USER1);
         token.approve(address(nfts), tokenFee);
-        nfts.mint{value: 10 * ethFee}(10);
+        nfts.mint{value: MAX_PER_WALLET * ethFee}(MAX_PER_WALLET);
         vm.stopPrank();
 
         vm.expectRevert(FlameStarters.FlameStarters_ExceedsMaxPerWallet.selector);
@@ -227,21 +227,19 @@ contract TestUserFunctions is TestInitialized {
     function test__RevertWhen__MaxSupplyExceeded() public funded(USER1) funded(USER2) mintOpen {
         address owner = nfts.owner();
         vm.startPrank(owner);
-        nfts.setMaxPerWallet(10000);
+        nfts.setMaxPerWallet(MAX_SUPPLY);
         nfts.setBatchLimit(100);
         nfts.setTokenFee(10 ether);
 
         vm.startPrank(USER1);
-        uint256 ethFee = 100 * nfts.getEthFee();
-        uint256 tokenFee = 100 * nfts.getTokenFee();
-        for (uint256 index = 0; index < 100; index++) {
+        uint256 ethFee = nfts.getEthFee();
+        uint256 tokenFee = nfts.getTokenFee();
+        for (uint256 index = 0; index < MAX_SUPPLY; index++) {
             token.approve(address(nfts), tokenFee);
-            nfts.mint{value: ethFee}(100);
+            nfts.mint{value: ethFee}(1);
         }
         vm.stopPrank();
 
-        ethFee = nfts.getEthFee();
-        tokenFee = nfts.getTokenFee();
         vm.prank(USER2);
         token.approve(address(nfts), tokenFee);
 
@@ -368,9 +366,9 @@ contract TestUserFunctions is TestInitialized {
         uint256 tokenFee = nfts.getTokenFee();
 
         vm.prank(USER1);
-        token.approve(address(nfts), tokenFee * 10000);
+        token.approve(address(nfts), tokenFee * MAX_SUPPLY);
         vm.roll(roll);
-        for (uint256 index = 0; index < 10000; index++) {
+        for (uint256 index = 0; index < MAX_SUPPLY; index++) {
             vm.prank(USER1);
             nfts.mint{value: ethFee}(1);
             string memory tokenUri = nfts.tokenURI(index);

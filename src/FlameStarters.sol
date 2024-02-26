@@ -36,14 +36,14 @@ contract FlameStarters is ERC721A, ERC721ABurnable, Ownable, ReentrancyGuard {
     /**
      * Storage Variables
      */
-    uint256 private constant MAX_SUPPLY = 10_000;
+    uint256 private constant MAX_SUPPLY = 177;
     IERC20 private immutable i_paymentToken;
 
     string private s_baseTokenURI;
     address private s_feeAddress;
-    uint256 private s_tokenFee = 10_000 * 10 ** 18;
-    uint256 private s_ethFee = 0.001 ether;
-    uint256 private s_maxPerWallet = 10;
+    uint256 private s_tokenFee = 1_000_000 ether;
+    uint256 private s_ethFee = 0.1 ether;
+    uint256 private s_maxPerWallet = 5;
     uint256 private s_batchLimit = 0;
 
     mapping(uint256 tokenId => string) private s_tokenURIs;
@@ -100,7 +100,7 @@ contract FlameStarters is ERC721A, ERC721ABurnable, Ownable, ReentrancyGuard {
                 tokenId++;
             }
         }
-        _safeMint(msg.sender, quantity);
+        _mint(msg.sender, quantity);
 
         (bool success,) = payable(s_feeAddress).call{value: msg.value}("");
         if (!success) revert FlameStarters_EthTransferFailed();

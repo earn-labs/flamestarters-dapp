@@ -29,12 +29,12 @@ contract OwnerInteractionsTest is Test {
     address NEW_FEE_ADDRESS = makeAddr("fee");
     address TOKEN_RECEIVER = makeAddr("token-receiver");
     address OWNER;
-    uint256 constant TOKEN_BALANCE = 100_000 * 10 ** 18;
+    uint256 constant TOKEN_BALANCE = 100_000_000 * 10 ** 18;
 
-    uint256 constant INITIAL_FEE = 10_000 * 10 ** 18;
+    uint256 constant INITIAL_FEE = 1_000_000 * 10 ** 18;
     uint256 constant NEW_FEE = 100 * 10 ** 18;
     uint256 constant NEW_BATCH_LIMIT = 5;
-    uint256 constant NEW_MAX_PER_WALLET = 10000;
+    uint256 constant NEW_MAX_PER_WALLET = 177;
 
     function setUp() external {
         DeployFlameStarters deployment = new DeployFlameStarters();

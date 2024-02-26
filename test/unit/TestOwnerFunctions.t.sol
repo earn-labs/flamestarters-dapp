@@ -37,7 +37,7 @@ contract TestOwnerFunctions is TestInitialized {
     modifier mintOpen() {
         // fund user
         vm.startPrank(nfts.owner());
-        nfts.setBatchLimit(10);
+        nfts.setBatchLimit(MAX_PER_WALLET - 1);
         vm.stopPrank();
         _;
     }
@@ -120,10 +120,10 @@ contract TestOwnerFunctions is TestInitialized {
         address owner = nfts.owner();
 
         vm.expectEmit(true, true, true, true);
-        emit SetMaxPerWallet(owner, 1000);
+        emit SetMaxPerWallet(owner, MAX_SUPPLY);
 
         vm.prank(owner);
-        nfts.setMaxPerWallet(1000);
+        nfts.setMaxPerWallet(MAX_SUPPLY);
     }
 
     function test__EmitEvent__SetBatchLimit() public {

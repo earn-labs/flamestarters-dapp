@@ -24,25 +24,25 @@ contract HelperConfig is Script {
             block.chainid == 11155111 || block.chainid == 97 || block.chainid == 84532 || block.chainid == 84531
                 || block.chainid == 80001
         ) {
-            activeNetworkConfig = getBscTestnetConfig();
+            activeNetworkConfig = getTestnetConfig();
         } else {
             activeNetworkConfig = getAnvilConfig();
         }
     }
 
-    function getBscTestnetConfig() public pure returns (NetworkConfig memory) {
+    function getTestnetConfig() public pure returns (NetworkConfig memory) {
         return NetworkConfig({
             initialOwner: 0xCbA52038BF0814bC586deE7C061D6cb8B203f8e1,
             feeAddress: 0xCbA52038BF0814bC586deE7C061D6cb8B203f8e1,
-            tokenAddress: 0xb6347F2A99CB1a431729e9D4F7e946f58E7C35C7
+            tokenAddress: 0x17cE1F8De9235EC9aACd58c56de5F8eA4bD8E063
         });
     }
 
     function getMainnetConfig() public pure returns (NetworkConfig memory) {
         return NetworkConfig({
             initialOwner: 0x4671a210C4CF44C43dC5E44DAf68e64D46cdc703,
-            feeAddress: 0x0cf66382d52C2D6c1D095c536c16c203117E2B2f,
-            tokenAddress: 0xEf3B8512196Ab65F8603b82D1FA5a29bb5ADFeD0
+            feeAddress: 0x0d8470Ce3F816f29AA5C0250b64BfB6421332829,
+            tokenAddress: 0xB0BcB4eDE80978f12aA467F7344b9bdBCd2497f3
         });
     }
 

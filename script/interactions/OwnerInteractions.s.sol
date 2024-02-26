@@ -61,7 +61,7 @@ contract SetNewFeeAddress is Script {
 }
 
 contract SetNewMaxPerWallet is Script {
-    uint256 constant NEW_MAX_PER_WALLET = 10000;
+    uint256 constant NEW_MAX_PER_WALLET = 177;
     IERC20 token;
 
     function setNewMaxPerWallet(address recentContractAddress) public {
