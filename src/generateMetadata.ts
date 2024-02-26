@@ -48,38 +48,43 @@ async function readDir(dirName: string) {
 }
 
 async function main() {
-  const imageList = await readDir("images");
+  const metadataFile = fs.readFileSync("TheFlameStartersTraits.txt", "utf-8");
+
+  const metadataList = metadataFile.split(/\r?\n/);
 
   // write logs
   fs.writeFile("./logs.txt", "", function (err) {});
 
-  for (let index = 1; index <= imageList.length; index++) {
-    const file = imageList[index - 1];
-    console.log(file);
-    const [trait, name] = file.split("/");
-
-    let legTrait = legendaryTraits.get(name);
-    if (legTrait == undefined) {
-      legTrait = "";
-    }
+  for (let index = 1; index <= 177; index++) {
+    const line = metadataList[index];
+    console.log(index + ": " + line);
+    const [imgFile, rarity, design, accessory, special] = line.split("\t");
 
     // write logs
-    fs.appendFileSync("./logs.txt", index + ": " + file + "\n");
+    fs.appendFileSync("./logs.txt", index + ": " + imgFile + "\n");
 
     // write metadata file
     let json: metaData;
     json = {
       name: "FlameStarter #" + index,
       description: "",
-      image: url + trait + "/" + name,
+      image: url + rarity + "/" + imgFile,
       attributes: [
         {
           trait_type: "Rarity",
-          value: trait,
+          value: rarity,
         },
         {
-          trait_type: "Legendary",
-          value: legTrait,
+          trait_type: "Design",
+          value: design,
+        },
+        {
+          trait_type: "Accessory",
+          value: accessory,
+        },
+        {
+          trait_type: "Special",
+          value: special,
         },
       ],
     };
