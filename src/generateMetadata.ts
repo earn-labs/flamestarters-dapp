@@ -21,6 +21,16 @@ interface metaData {
   attributes: any[];
 }
 
+function shuffle(array: string[]) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
+
 async function getFileList(dirName: string) {
   let files: string[] = [];
   const items = await readdir(dirName, { withFileTypes: true });
@@ -50,13 +60,14 @@ async function readDir(dirName: string) {
 async function main() {
   const metadataFile = fs.readFileSync("TheFlameStartersTraits.txt", "utf-8");
 
-  const metadataList = metadataFile.split(/\r?\n/);
+  const metadataList = metadataFile.split(/\r?\n/).slice(0, 177);
+  const randomizedList = shuffle(metadataList);
 
   // write logs
   fs.writeFile("./logs.txt", "", function (err) {});
 
   for (let index = 1; index <= 177; index++) {
-    const line = metadataList[index];
+    const line = randomizedList[index - 1];
     console.log(index + ": " + line);
     const [imgFile, rarity, design, accessory, special] = line.split("\t");
 

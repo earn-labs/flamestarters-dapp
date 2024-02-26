@@ -1,4 +1,3 @@
-File	Rarity	Design	Accessory	Special
 1.png	Common	Gold	Sunglasses	None
 2.png	Uncommon	Baked	Stoned Eyes	None
 3.png	Rare	Faux Gucci	Lit	None
