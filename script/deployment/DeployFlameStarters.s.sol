@@ -6,7 +6,7 @@ import {FlameStarters} from "../../src/FlameStarters.sol";
 import {HelperConfig} from "../helpers/HelperConfig.s.sol";
 
 contract DeployFlameStarters is Script {
-    string public baseUri = "ipfs://bafybeianoe7mocu5s2pwnftktnxhbcwxwysnxf6x2cjbunlzvgzoo6n23u/";
+    string public baseUri = "ipfs://bafybeid2becus7ppm3nmpgzldkqeegs3hetpjqn7i32ko3eu3imct3ooi4/";
     HelperConfig public helperConfig;
 
     function run() external returns (FlameStarters, HelperConfig) {
