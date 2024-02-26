@@ -65,10 +65,10 @@ This repo contains the code to generate a collection of 177 unique AI-generated 
 
 **IPFS Storage:** 
 
-images: ipfs://bafybeibjoz7wbjpajjf6dgg3l6djy4kltutg45fhhnnuc5qjqo2po5qbfe  
-metadata: ipfs://bafybeia46ygme5csjbmqa73eacqcxmkfmmsajzkgvcxcr7a6tv2bl26nla
+images: ipfs://bafybeihmnzln7owlnyo7s6cjtca66d35s3bl522yfx5tjnn3j7z6ol4aiy  
+metadata: ipfs://bafybeianoe7mocu5s2pwnftktnxhbcwxwysnxf6x2cjbunlzvgzoo6n23u
 
-The images and parts of the metadata were generated with Photoshop and [GENFTY](https://www.genfty.com/).
+The art was designed by [@CreativeCuse](https://twitter.com/CreativeCuse).
 
 #### Generate Metadata for IPFS
 
