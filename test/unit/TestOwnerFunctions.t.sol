@@ -92,6 +92,21 @@ contract TestOwnerFunctions is TestInitialized {
         assertGt(newBalance, initialBalance);
     }
 
+    function test__OwnerCanWithdrawEth() public {
+        uint256 amount = 1 ether;
+        deal(address(this), amount);
+        address(nfts).call{value: amount}("");
+
+        uint256 initialBalance = nfts.owner().balance;
+
+        vm.startPrank(nfts.owner());
+        nfts.withdrawETH(nfts.owner());
+        vm.stopPrank();
+        uint256 newBalance = nfts.owner().balance;
+        assertEq(address(nfts).balance, 0);
+        assertEq(newBalance, initialBalance + amount);
+    }
+
     //////////////////////
     // events          //
     /////////////////////
@@ -120,10 +135,11 @@ contract TestOwnerFunctions is TestInitialized {
         address owner = nfts.owner();
 
         vm.expectEmit(true, true, true, true);
-        emit SetMaxPerWallet(owner, MAX_SUPPLY);
+        emit SetMaxPerWallet(owner, nfts.getMaxSupply());
 
-        vm.prank(owner);
-        nfts.setMaxPerWallet(MAX_SUPPLY);
+        vm.startPrank(owner);
+        nfts.setMaxPerWallet(nfts.getMaxSupply());
+        vm.stopPrank();
     }
 
     function test__EmitEvent__SetBatchLimit() public {

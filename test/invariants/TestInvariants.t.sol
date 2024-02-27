@@ -47,7 +47,7 @@ contract TestInvariants is TestInitialized {
     }
 
     function invariant__TotalSupplyIsLessThanOrEqualMaxSupply() public skipFork {
-        assertLt(nfts.totalSupply(), MAX_SUPPLY);
+        assertLt(nfts.totalSupply(), nfts.getMaxSupply());
     }
 
     function invariant__TotalCollectedFees() public skipFork {

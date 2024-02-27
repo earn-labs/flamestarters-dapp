@@ -65,7 +65,7 @@ contract TestUserFunctions is TestInitialized {
 
     modifier maxMintAllowed() {
         vm.startPrank(token.owner());
-        nfts.setMaxPerWallet(MAX_SUPPLY);
+        nfts.setMaxPerWallet(nfts.getMaxSupply());
         nfts.setBatchLimit(100);
         nfts.setTokenFee(FUZZ_FEE);
         nfts.setEthFee(FUZZ_ETH_FEE);
@@ -105,7 +105,7 @@ contract TestUserFunctions is TestInitialized {
         uint256 ethFee = nfts.getEthFee();
         uint256 tokenFee = nfts.getTokenFee();
 
-        for (uint256 index = 0; index < MAX_SUPPLY; index++) {
+        for (uint256 index = 0; index < nfts.getMaxSupply(); index++) {
             vm.roll(index);
             vm.startPrank(USER1);
             token.approve(address(nfts), tokenFee);
@@ -209,14 +209,14 @@ contract TestUserFunctions is TestInitialized {
     function test__RevertWhen__MaxSupplyExceeded() public funded(USER1) funded(USER2) mintOpen {
         address owner = nfts.owner();
         vm.startPrank(owner);
-        nfts.setMaxPerWallet(MAX_SUPPLY);
+        nfts.setMaxPerWallet(nfts.getMaxSupply());
         nfts.setBatchLimit(100);
         nfts.setTokenFee(10 ether);
 
         vm.startPrank(USER1);
         uint256 ethFee = nfts.getEthFee();
         uint256 tokenFee = nfts.getTokenFee();
-        for (uint256 index = 0; index < MAX_SUPPLY; index++) {
+        for (uint256 index = 0; index < nfts.getMaxSupply(); index++) {
             token.approve(address(nfts), tokenFee);
             nfts.mint{value: ethFee}(1);
         }
@@ -348,9 +348,9 @@ contract TestUserFunctions is TestInitialized {
         uint256 tokenFee = nfts.getTokenFee();
 
         vm.prank(USER1);
-        token.approve(address(nfts), tokenFee * MAX_SUPPLY);
+        token.approve(address(nfts), tokenFee * nfts.getMaxSupply());
         vm.roll(roll);
-        for (uint256 index = 0; index < MAX_SUPPLY; index++) {
+        for (uint256 index = 0; index < nfts.getMaxSupply(); index++) {
             vm.prank(USER1);
             nfts.mint{value: ethFee}(1);
             string memory tokenUri = nfts.tokenURI(index + 1);

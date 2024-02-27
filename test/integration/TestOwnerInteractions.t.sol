@@ -17,7 +17,8 @@ import {
     SetNewFeeAddress,
     SetNewMaxPerWallet,
     SetNewBatchLimit,
-    WithdrawTokensFromContract
+    WithdrawTokensFromContract,
+    WithdrawEthFromContract
 } from "../../script/interactions/OwnerInteractions.s.sol";
 
 contract OwnerInteractionsTest is Test {
@@ -30,7 +31,7 @@ contract OwnerInteractionsTest is Test {
     address TOKEN_RECEIVER = makeAddr("token-receiver");
     address OWNER;
     uint256 constant TOKEN_BALANCE = 100_000_000 * 10 ** 18;
-
+    uint256 constant ETH_BALANCE = 1 ether;
     uint256 constant INITIAL_FEE = 1_000_000 * 10 ** 18;
     uint256 constant NEW_FEE = 100 * 10 ** 18;
     uint256 constant NEW_BATCH_LIMIT = 5;
@@ -91,5 +92,18 @@ contract OwnerInteractionsTest is Test {
 
         assertEq(token.balanceOf(address(nftContract)), 0);
         assertEq(token.balanceOf(msg.sender) - startingBalance, TOKEN_BALANCE);
+    }
+
+    function test__Integration__OwnerWithdrawEth() public {
+        deal(address(this), ETH_BALANCE);
+        address(nftContract).call{value: ETH_BALANCE}("");
+        assertEq(address(nftContract).balance, ETH_BALANCE);
+
+        uint256 startingBalance = (msg.sender).balance;
+        WithdrawEthFromContract withdrawEthFromContract = new WithdrawEthFromContract();
+        withdrawEthFromContract.withrawEthFromContract(address(nftContract));
+
+        assertEq(address(nftContract).balance, 0);
+        assertEq((msg.sender).balance - startingBalance, ETH_BALANCE);
     }
 }

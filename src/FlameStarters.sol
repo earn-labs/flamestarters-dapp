@@ -9,7 +9,8 @@ import {ERC721ABurnable} from "@erc721a/contracts/extensions/ERC721ABurnable.sol
 
 /// @title FlameStarters NFTs
 /// @author Nadina Oates
-/// @notice Contract implementing ERC721 standard using the ERC20 token for minting
+/// @notice Contract implementing ERC721A standard using the ERC20 token and ETH for minting
+/// @dev Inherits from ERC721A and ERC721ABurnable and openzeppelin Ownable
 contract FlameStarters is ERC721A, ERC721ABurnable, Ownable {
     /**
      * Errors
@@ -44,9 +45,6 @@ contract FlameStarters is ERC721A, ERC721ABurnable, Ownable {
     uint256 private s_maxPerWallet = 5;
     uint256 private s_batchLimit = 0;
 
-    mapping(uint256 tokenId => string) private s_tokenURIs;
-    uint256[] private s_ids = new uint256[](MAX_SUPPLY);
-
     /**
      * Events
      */
@@ -54,13 +52,11 @@ contract FlameStarters is ERC721A, ERC721ABurnable, Ownable {
     event SetEthFee(address indexed sender, uint256 fee);
     event SetMaxPerWallet(address indexed sender, uint256 maxPerWallet);
     event SetBatchLimit(address indexed sender, uint256 batchLimit);
-    event MetadataUpdate(uint256 indexed tokenId);
 
     /// @notice Constructor
     /// @param initialOwner ownerhip is transfered to this address after creation
     /// @param initialFeeAddress address to receive minting fees
     /// @param baseURI base uri for NFT metadata
-    /// @dev inherits from ERC721A
     constructor(address initialOwner, address initialFeeAddress, address tokenAddress, string memory baseURI)
         ERC721A("FlameStarters", "FLAMESTARTER")
         Ownable(msg.sender)
@@ -93,11 +89,11 @@ contract FlameStarters is ERC721A, ERC721ABurnable, Ownable {
 
         _mint(msg.sender, quantity);
 
-        (bool success,) = payable(s_feeAddress).call{value: msg.value}("");
-        if (!success) revert FlameStarters_EthTransferFailed();
-
-        success = i_paymentToken.transferFrom(msg.sender, s_feeAddress, s_tokenFee * quantity);
+        bool success = i_paymentToken.transferFrom(msg.sender, s_feeAddress, s_tokenFee * quantity);
         if (!success) revert FlameStarters_TokenTransferFailed();
+
+        (success,) = payable(s_feeAddress).call{value: msg.value}("");
+        if (!success) revert FlameStarters_EthTransferFailed();
     }
 
     /// @notice Sets minting fee in terms of ERC20 tokens (only owner)
@@ -114,8 +110,8 @@ contract FlameStarters is ERC721A, ERC721ABurnable, Ownable {
         emit SetEthFee(msg.sender, fee);
     }
 
-    /// @notice Sets the receiver address for the token fee (only owner)
-    /// @param feeAddress New receiver address for tokens received through minting
+    /// @notice Sets the receiver address for the token/ETH fee (only owner)
+    /// @param feeAddress New receiver address for tokens and ETH received through minting
     function setFeeAddress(address feeAddress) external onlyOwner {
         if (feeAddress == address(0)) {
             revert FlameStarters_FeeAddressIsZeroAddress();
@@ -155,6 +151,16 @@ contract FlameStarters is ERC721A, ERC721ABurnable, Ownable {
         IERC20 tokenContract = IERC20(tokenAddress);
         uint256 amount = tokenContract.balanceOf(address(this));
         success = tokenContract.transfer(receiverAddress, amount);
+        if (!success) revert FlameStarters_TokenTransferFailed();
+    }
+
+    /// @notice Withdraw ETH from contract (only owner)
+    /// @param receiverAddress ETH withdrawn to this address
+    /// @return success of withdrawal
+    function withdrawETH(address receiverAddress) external onlyOwner returns (bool success) {
+        uint256 amount = address(this).balance;
+        (success,) = payable(receiverAddress).call{value: amount}("");
+        if (!success) revert FlameStarters_EthTransferFailed();
     }
 
     /**

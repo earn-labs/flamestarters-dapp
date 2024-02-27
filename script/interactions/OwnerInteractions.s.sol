@@ -125,3 +125,18 @@ contract WithdrawTokensFromContract is Script {
         withrawTokensFromContract(recentContractAddress);
     }
 }
+
+contract WithdrawEthFromContract is Script {
+    address ETH_RECEIVER = makeAddr("token-receiver");
+
+    function withrawEthFromContract(address recentContractAddress) public {
+        vm.startBroadcast();
+        FlameStarters(payable(recentContractAddress)).withdrawETH(tx.origin);
+        vm.stopBroadcast();
+    }
+
+    function run() external {
+        address recentContractAddress = DevOpsTools.get_most_recent_deployment("FlameStarters", block.chainid);
+        withrawEthFromContract(recentContractAddress);
+    }
+}

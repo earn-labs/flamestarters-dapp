@@ -52,7 +52,7 @@ This repository contains the smart contract and deployment/testing suite to crea
 https://testnet.bscscan.com/address/0x17ce1f8de9235ec9aacd58c56de5f8ea4bd8e063
 
 **NFT Contract**  
-https://testnet.bscscan.com/address/0x037fcc281f6366b9a49263ae7a3776c1de05e1b3
+https://testnet.bscscan.com/address/0xf72d5237b5ad316944c7c57d5f4df8aebebbebcd
 
 ### Smart Contracts Mainnet
 
