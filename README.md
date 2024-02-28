@@ -154,7 +154,7 @@ Nadina Oates - [@N0_crypto](https://twitter.com/N0_crypto)
 
 Main Repository: [https://github.com/trashpirate/flamestarters](https://github.com/trashpirate/flamestarters)
 
-Project Link: [""]()
+Project Link: [https://flamestarters.buyholdearn.com](https://flamestarters.buyholdearn.com)
 
 
 <!-- ACKNOWLEDGMENTS -->
