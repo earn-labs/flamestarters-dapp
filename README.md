@@ -60,7 +60,7 @@ https://testnet.bscscan.com/address/0xf72d5237b5ad316944c7c57d5f4df8aebebbebcd
 https://bscscan.com/token/0xb0bcb4ede80978f12aa467f7344b9bdbcd2497f3
 
 **NFT Contract**  
-
+https://bscscan.com/address/0x0528C4DFc247eA8b678D0CA325427C4ca639DEC2
 
 <!-- GETTING STARTED -->
 ## Getting Started
